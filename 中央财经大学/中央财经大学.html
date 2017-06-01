@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://app.cufe.edu.cn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>中央财经大学</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="./中央财经大学_files/base.css" rel="stylesheet" type="text/css">
+    <link href="http://app.cufe.edu.cn/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="renderer" content="ie-comp">
+    <script type="text/javascript" src="./中央财经大学_files/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./中央财经大学_files/js.js"></script>
+
+    <script>
+        var os = function () {
+            var ua = navigator.userAgent,
+                    isQB = /(?:MQQBrowser|QQ)/.test(ua),
+                    isWindowsPhone = /(?:Windows Phone)/.test(ua),
+                    isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+                    isAndroid = /(?:Android)/.test(ua),
+                    isFireFox = /(?:Firefox)/.test(ua),
+                    isChrome = /(?:Chrome|CriOS)/.test(ua),
+                    isIpad = /(?:iPad|PlayBook)/.test(ua),
+                    isTablet = /(?:iPad|PlayBook)/.test(ua) || (isFireFox && /(?:Tablet)/.test(ua)),
+                    isSafari = /(?:Safari)/.test(ua),
+                    isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+                    isOpen = /(?:Opera Mini)/.test(ua),
+                    isUC = /(?:UCWEB|UCBrowser)/.test(ua),
+                    isPc = !isPhone && !isAndroid && !isSymbian;
+            return {
+                isQB: isQB,
+                isTablet: isTablet,
+                isPhone: isPhone,
+                isAndroid: isAndroid,
+                isPc: isPc,
+                isOpen: isOpen,
+                isUC: isUC,
+                isIpad: isIpad
+            };
+        }();
+
+        //横屏与竖屏切换，需要刷新页面
+        function orient() {
+            if (window.orientation == 0 || window.orientation == 180) {
+                return false;
+            }
+            else if (window.orientation == 90 || window.orientation == -90) {
+                return false;
+            }
+        }
+        $(window).bind('orientationchange', function (e) {
+            orient();
+            window.location.href = window.location.href;
+        });
+
+
+        if (os.isPc) {
+            // PC端
+            $('head').append('<link rel="stylesheet" type="text/css" href="img/style.css" >');
+        } else {
+            if ($(window).width() > 650) {
+                //手机端如果横屏了且超过650，而显示成PC端的样子
+                $('head').append('<link rel="stylesheet" type="text/css" href="img/style.css" >');
+            } else {
+                $('head').append('<link rel="stylesheet" type="text/css" href="img/imb6.2.css">');
+                $('head').append('<script src="js/mjs.js"><\/script>');
+            }
+        }
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./中央财经大学_files/style.css">
+
+    <style>
+        footer {
+            height: 180px;
+            padding-top: 10%;
+        }
+    </style>
+</head>
+<body>
+
+<!--用于微信浏览器访问-->
+<div class="weixin_none" id="j_weixin">
+    <img src="./中央财经大学_files/weixin.jpg" style="width: 100%" class="img-responsive">
+</div>
+
+<!-- pc端 -->
+<div class="header_box header_box_border">
+    <div class="header_center">
+        <a href="javascript:void(0)" class="download_btn">立即下载</a>
+        <a href="javascript:void(0)" class="logo">
+            <img src="./中央财经大学_files/logo.png">
+        </a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="banner_box banner_phone_note" style="height: 570px;">
+    <div class="banner_center" style="height: 570px;">
+        <div class="banner_phone"><img src="./中央财经大学_files/banner_phone.png"></div>
+        <div class="banner_info">
+            <img src="./中央财经大学_files/weixin.png">
+            <p>用新浪微博或微信扫一扫下载</p>
+            <a class="isIphone" target="_blank" href="https://itunes.apple.com/us/app/yi-dong-zhong-cai/id1111144535?l=zh&amp;ls=1&amp;mt=8"><i class="iphone-icon"></i>iPhone下载</a>
+            <a href="https://www.app8848.com/cufe/app_files/MC_CUFE.apk"><i class="android-icon"></i>Android下载</a>
+            <span class="banner_note">当前版本号: 1.1.1</span>
+            <span class="banner_note">更新日期: 2017.05.12</span>
+            <span class="banner_note">大小: 42M</span>
+            <span style="text-align: left">如有疑问，请咨询服务电话 010 - 6228 8102</span>
+        </div>
+
+    </div>
+</div>
+
+<div class="installation_help_box">
+    <h2>安装帮助</h2>
+    <div class="help_list">
+        <div class="list">
+            <h4>安卓用户请注意：</h4>
+                <span>
+                    当您进行版本更新时，如果遇
+                    到安装失败的情况，请您删除
+                    旧的APP后重试。
+                </span>
+        </div>
+        <div class="line"></div>
+        <div class="list">
+            <h4>IOS用户请注意：</h4>
+                <span>
+                    由于iOS开发者认证策略调整,
+                    已安装旧版本APP的用户如果出现
+                    "未受信任的企业级开发者"的提示，
+                    为保证正常使用，请删除旧版本的APP后重新下载。
+                </span>
+        </div>
+        <!--<div class="line"></div>-->
+        <!--<div class="list">-->
+            <!--<h4>IOS9用户请注意：</h4>-->
+                <!--<span>-->
+                    <!--由于 ios9 的开发者认证策略-->
+                    <!--调整, 会出现"未受信任的企业-->
+                    <!--级开发者"的提示.用户需在-->
+                    <!--[设置]-[通用]-[描述文件]-[企-->
+                    <!--业级应用] 手动开启信任。-->
+                <!--</span>-->
+        <!--</div>-->
+        <div class="clear"></div>
+    </div>
+    <!--<div class="installation_help_text">-->
+        <!--对您造成的不便, 深表歉意！<a href="javascript:void(0)" onclick="helpStep()" > 点此查看图文解决步骤 >></a>-->
+    <!--</div>-->
+</div>
+
+<div class="move_bg"></div>
+<div class="active_box active_phone_note">
+    <div class="active_center">
+        <div class="active_text move_text">
+            <h2>随身校务</h2>
+                <span>
+                    线上教务平台，将教学事务装进口袋。<br>
+                    记录发布工作流程，实现轻教学。<br>
+                    点到不用喊，开会不用跑，一键助学办公!<br>
+                </span>
+        </div>
+        <div class="active_phone"><img src="./中央财经大学_files/img_phone1.png"></div>
+    </div>
+</div>
+
+<div class="news_bg"></div>
+<div class="active_box active_phone_note">
+    <div class="active_center">
+        <div class="active_text news_text">
+            <h2>校园资讯</h2>
+                <span>
+                    摆脱信息孤岛，<br>
+                    上至学校新闻下至快递电话，<br>
+                    不用包打听，APP就是你的小灵通。<br>
+                </span>
+        </div>
+        <div class="active_phone news_phone"><img src="./中央财经大学_files/img_phone2.png"></div>
+    </div>
+</div>
+
+<div class="play_bg"></div>
+<div class="active_box active_phone_note">
+    <div class="active_center">
+        <div class="active_text play_text">
+            <h2>玩转大学</h2>
+                <span>
+                    贴海报被刷屏盖楼？发起活动无人参加？<br>
+                    找寻失物如大海捞针？新生入学似小白？<br>
+                    一个APP，一网打尽吃穿住行玩，聪明你的大学！<br>
+                </span>
+        </div>
+        <div class="active_phone play_phone"><img src="./中央财经大学_files/img_phone3.png"></div>
+    </div>
+</div>
+
+<div class="footer_box">
+    <div class="footer_center">
+        ©2016 中央财经大学 网络信息中心、数字化校园建设办公室 版权所有<br>
+        成都兰途网络科技有限公司协助建设
+    </div>
+</div>
+
+<!-- 头部立即下载弹出框 -->
+<div class="pop_bg"></div>
+<div class="pop_box">
+    <a href="javascript:void(0)" class="close">×</a>
+    <div class="title">手机扫描左侧二维码快速下载，或选择适合你的手机系统下载！</div>
+    <div class="pop_detail">
+        <img src="./中央财经大学_files/code.jpg">
+        <div class="btn_list">
+            <a target="_blank" href="https://itunes.apple.com/us/app/yi-dong-zhong-cai/id1111144535?l=zh&amp;ls=1&amp;mt=8"><i class="iphone-icon"></i>iPhone下载</a>
+            <a href="https://www.app8848.com/cufe/app_files/MC_CUFE.apk"><i class="android-icon"></i>Android下载</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--<div class="text">下载遇到问题了？ <a class="help_step" onclick="helpStep()" > 点此查看图文解决步骤 >></a></div>-->
+</div>
+
+<!--解决步骤帮助弹出框-->
+<div class="help_bg"></div>
+<div class="help_box">
+    <a href="javascript:void(0)" class="close" onclick="closeHelpStep()">×</a>
+    <div class="title">
+        <span class="title-user">IOS 9 用户请注意：</span>
+        <span class="title-content">您下载好APP以后会出现“未受信任的企业级开发者”问题。请您按照下方图片流程设置解决此问题。</span>
+    </div>
+    <div class="container" style="overflow: hidden;">
+        <div class="imgTe">
+            <p>1.首先点击设置中的通用</p>
+            <div class="img"><img src="./中央财经大学_files/img_help1.png" class="img-responsive"></div>
+        </div>
+        <div class="imgTe imgTe-db">
+            <p>2.然后进入通用中的描述文件</p>
+            <div class="img"><img src="./中央财经大学_files/img_help2.png" class="img-responsive"></div>
+        </div>
+        <div class="imgTe">
+            <p>3.可以看到如下图的企业级应用,点击</p>
+            <div class="img"><img src="./中央财经大学_files/img_help3.png" class="img-responsive"></div>
+        </div>
+        <div class="imgTe">
+            <p>4.点击后选择信任</p>
+            <div class="img"><img src="./中央财经大学_files/img_help4.png" class="img-responsive"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function() {
+        if (os.isPc) {
+            var winHeight = $(window).height();
+            $(".banner_box,.banner_center").animate({height: (winHeight - 100) > 570 ? (winHeight - 100) : 570}, 100);
+            $(window).load(function () {
+                var bannerHeight = (winHeight - 100) > 570 ? (winHeight - 100) : 570;
+                if (bannerHeight <= 740) {
+                    //   console.log("reset1-->"+bannerHeight);
+                    $('.banner_box').addClass("banner_phone_note");
+                    $('.active_box').addClass("active_phone_note");
+                } else {
+                    //    console.log("reset2-->"+bannerHeight);
+                    $('.banner_box').removeClass("banner_phone_note");
+                    $('.active_box').removeClass("active_phone_note");
+                }
+            })
+
+            $(window).resize(function () {
+                winHeight = $(window).height();
+                $(".banner_box,.banner_center").animate({height: (winHeight - 100) > 570 ? (winHeight - 100) : 570}, 100);
+                var bannerHeight = (winHeight - 100) > 570 ? (winHeight - 100) : 570;
+                if (bannerHeight <= 740) {
+                    //  console.log("reset3-->"+bannerHeight);
+                    $('.banner_box').addClass("banner_phone_note");
+                    $('.active_box').addClass("active_phone_note");
+                } else {
+                    // console.log("reset4-->"+bannerHeight);
+                    $('.banner_box').removeClass("banner_phone_note");
+                    $('.active_box').removeClass("active_phone_note");
+                }
+            });
+
+        }else{
+            var winHeight = $(window).height();
+            $(".banner_box,.banner_center").animate({height: (winHeight - 100) > 570 ? (winHeight - 100) : 570}, 100);
+        }
+
+    })();
+    download();
+</script>
+
+<!-- 手机 -->
+<div class="none top-right">
+    <a class="top-right-download-btn download-btn" href="javascript:;">
+        <img id="t_down" class="radius-btn" src="./中央财经大学_files/icon-download.png">
+    </a>
+</div>
+
+<!-- 背景图 -->
+<div class="none page-bg page-text-none active" style="z-index: -10">
+    <h2>安装说明</h2>
+    <div class="list">
+        <h4>安卓用户请注意：</h4>
+                <span>
+                    当您进行版本更新时，如果遇
+                    到安装失败的情况，请您删除
+                    旧的APP后重试。
+                </span>
+    </div>
+    <div class="list">
+        <h4>IOS用户请注意：</h4>
+                <span>
+                    由于iOS开发者认证策略调整, 已安装旧版本APP的用户如果出现"未受信任的企业级开发者"的提示，为保证正常使用，请删除旧版本的APP后重新下载。
+                </span>
+    </div>
+    <!--<div class="list">-->
+        <!--<h4>IOS9用户请注意：</h4>-->
+                <!--<span>-->
+                    <!--由于 ios9 的开发者认证策略-->
+                    <!--调整, 会出现"未受信任的企业-->
+                    <!--级开发者"的提示.用户需在-->
+                    <!--[设置]-[通用]-[描述文件]-[企-->
+                    <!--业级应用] 手动开启信任。-->
+                <!--</span>-->
+    <!--</div>-->
+    <!--<div class="help_text">-->
+        <!--对您造成的不便, 深表歉意！<a target='_BLANK' href="https://www.app8848.com/ios9question/question.html"> 点此查看图文解决步骤 >></a>-->
+    <!--</div>-->
+
+
+</div>
+<div class="none page-bg page-bg-2"></div>
+<div class="none page-bg page-bg-4"></div>
+<div class="none page-bg page-bg-6"></div>
+<!-- 背景图 -->
+
+<div class="none main" id="skrollr-body">
+    <section class="page page-1" style="">
+        <h1>移劝来门户啦</h1>
+
+        <a href="javascript:;" class="download-btn" id="head-download">
+            <img class="radius-btn disN img-download-i-h" src="./中央财经大学_files/download-1.png" title="苹果下载">
+            <img class="radius-btn disN" src="./中央财经大学_files/download-2.png" title="安卓下载">
+            <p class="loadPromptGif" id="p-loadPromptGif-h"><img src="./中央财经大学_files/loading.gif"></p>
+            <p class="loadPublicPrompt loadPromptFont" id="p-loadPromptFont-h">正在安装中...请按 Home 键返回桌面查看</p>
+        </a>
+        <p id="vernew" class="vernew"><span>当前版本号: 1.1.1</span> <span>更新日期: 2017.05.12</span></p>
+        <a class="vernew" href="tel:010 - 6228 8102">如有疑问，请咨询服务电话 010 - 6228 8102</a>
+        <aside id="scroll-tips" class="scroll-tips">
+            <span class="arr tips_ani"></span>
+        </aside>
+    </section>
+
+    <section class="page page-img page-text" data-emit-events="" data-top="">
+        <div class="background">
+            <h2>安装说明</h2>
+            <div class="list">
+                <h4>安卓用户请注意：</h4>
+                <span>
+                    当您进行版本更新时，如果遇
+                    到安装失败的情况，请您删除
+                    旧的APP后重试。
+                </span>
+            </div>
+            <div class="list">
+                <h4>IOS用户请注意：</h4>
+                <span>
+                   由于iOS开发者认证策略调整, 已安装旧版本APP的用户如果出现"未受信任的企业级开发者"的提示，为保证正常使用，请删除旧版本的APP后重新下载。
+                </span>
+            </div>
+            <!--<div class="list">-->
+                <!--<h4>IOS9用户请注意：</h4>-->
+                <!--<span>-->
+                    <!--由于 ios9 的开发者认证策略-->
+                    <!--调整, 会出现"未受信任的企业-->
+                    <!--级开发者"的提示.用户需在-->
+                    <!--[设置]-[通用]-[描述文件]-[企-->
+                    <!--业级应用] 手动开启信任。-->
+                <!--</span>-->
+            <!--</div>-->
+            <!--<div class="help_text">-->
+                <!--对您造成的不便, 深表歉意！<a target='_BLANK' href="https://www.app8848.com/ios9question/question.html"> 点此查看图文解决步骤 >></a>-->
+            <!--</div>-->
+        </div>
+       <!-- <a href="http://www.baidu.com"></a>-->
+    </section>
+
+
+    <section class="page page-img page-2" data-emit-events="" data-bottom-top="">
+        <div class="background"></div>
+        <p data-emit-events="" data-center-top="">随身校务</p>
+    </section>
+    <section class="page page-detial page-3">
+        <h2>
+            <span>
+                • 线上教务平台，将教学事务装进口袋。<br>
+                • 记录发布工作流程，实现轻教学。<br>
+                • 点到不用喊，开会不用跑，一键助学办公!<br>
+            </span>
+        </h2>
+        <div class="phone-wrap">
+            <img class="phone" src="./中央财经大学_files/img_phone1.png" alt="">
+        </div>
+    </section>
+    <section class="page page-img page-4" data-emit-events="" data-bottom-top="">
+        <div class="background">        </div>
+        <p data-emit-events="" data-center-top="">校园资讯</p>
+    </section>
+    <section class="page page-detial page-5">
+        <h2>
+            <span>
+                 • 摆脱信息孤岛，<br>
+                 • 上至学校新闻下至快递电话，<br>
+                 • 不用包打听，APP就是你的小灵通。<br>
+            </span>
+        </h2>
+        <div class="phone-wrap">
+            <img class="phone" src="./中央财经大学_files/img_phone2.png" alt="">
+        </div>
+    </section>
+    <section class="page page-img page-6" data-emit-events="" data-bottom-top="">
+        <div class="background"></div>
+        <p data-emit-events="" data-center-top="">玩转大学</p>
+    </section>
+    <section class="page page-detial page-7">
+        <h2>
+            <span>
+                 • 贴海报被刷屏盖楼？发起活动无人参加？<br>
+                 • 找寻失物如大海捞针？新生入学似小白？<br>
+                 • 一个APP，一网打尽吃穿住行玩，聪明你的大学！<br>
+            </span>
+        </h2>
+        <div class="phone-wrap">
+            <img class="phone" src="./中央财经大学_files/img_phone3.png" alt="">
+
+        </div>
+    </section>
+    <footer>
+        <a href="javascript:;" id="foot-download" class="download-btn" data-emit-events="" data-bottom-top="">
+            <img class="radius-btn disN img-download-i-f" src="./中央财经大学_files/download-1.png" title="苹果下载">
+            <img class="radius-btn disN" src="./中央财经大学_files/download-2.png" title="安卓下载">
+            <p class="loadPromptGif" id="p-loadPromptGif-f"><img src="./中央财经大学_files/loading.gif"></p>
+            <p class="loadPublicPrompt loadPromptFont" id="p-loadPromptFont-f">正在安装中... 请按 Home 键返回桌面查看</p>
+        </a>
+        <p>
+            ©2016 中央财经大学<br>
+            网络信息中心、数字化校园建设办公室 版权所有<br>
+            成都兰途网络科技有限公司协助建设<br>
+        </p>
+    </footer>
+</div>
+
+<!-- 手机端要用到的JS -->
+<script src="./中央财经大学_files/qqapi.js"></script>
+<script src="./中央财经大学_files/zepto.min.js"></script>
+<script src="./中央财经大学_files/skrollr.min.js"></script>
+
+</body></html>

@@ -1,0 +1,180 @@
+.header_box{width:100%;height:100px;background:#fff;position:fixed;top:0;left:0;z-index:100;}
+.header_box_border{border-bottom:1px solid #f1f1f1;}
+.header_center{width:1012px;margin:0 auto;height:100px;}
+.header_center a.download_btn{display:inline-block;width:148px;height:44px;line-height:42px;text-align:center;border-radius:5px;border:1px solid #2b4464;color: #2b4464;font-size:24px;float:right;margin-top:27px;transition:all 0.3s linear 0s;}
+.header_center a.download_btn:hover{background: #2b4464;color:#fff;}
+.header_center a.download_btn:active{position:relative;top:2px;}
+.header_center a.logo{float:left;width:420px;height:100px;}
+.header_center a.logo img{padding: 14px}
+
+.banner_box{width:100%;background:url(banner.jpg) no-repeat center center;background-size:cover;margin-top:100px;}
+.banner_center{width:1012px;margin:0 auto;position:relative;}
+.banner_center .banner_phone{position:absolute;right:0;bottom:58%;margin-bottom:-372px;text-align:center;}
+.banner_center .banner_phone img{width:70%;}
+.banner_center .banner_info{position:absolute;bottom:50%;left:20px;margin-bottom:-362px;}
+.banner_center .banner_info img{width:70%;}
+.banner_center .banner_info p{padding: 6px 0 24px 10px;font-size: 14px;color: #fff;}
+.banner_center .banner_info span{display:block;color:#fff;text-align:center;font-size:12px;width:320px;line-height:24px;}
+.banner_center .banner_info .banner_note{width: inherit;display: inline-block;padding-right: 8px}
+.banner_center .banner_info a{display:block;width:318px;height:58px;border:1px solid #fff;border-radius:5px;line-height:58px;font-size:18px;color:#ffffff;margin-bottom:10px;font-weight:bold;transition:all 0.2s linear 0s;}
+.banner_center .banner_info a i{display:inline-block;width:40px;height:40px;float:left;margin:10px 20px 10px 70px;transition:all 0.2s linear 0s;}
+.banner_center .banner_info a i.iphone-icon{background:url(icon.png) no-repeat 0 0;}
+.banner_center .banner_info a i.android-icon{background:url(icon.png) no-repeat -40px 0;}
+.banner_center .banner_info a:hover{background:#fff;color: #2b4464;}
+.banner_center .banner_info a:hover i.iphone-icon{background:url(icon.png) no-repeat 0 -40px;}
+.banner_center .banner_info a:hover i.android-icon{background:url(icon.png) no-repeat -40px -40px;}
+.banner_center .banner_info a:active{position:relative;top:2px;}
+
+.banner_phone_note .banner_center .banner_phone{margin-bottom:-228px;right: 4%}
+.banner_phone_note .banner_center .banner_phone img{width:46%;}
+.banner_phone_note .banner_center .banner_info{margin-bottom:-220px;left: 20%}
+.banner_phone_note .banner_center .banner_info img{width:40%;}
+.banner_phone_note .banner_center .banner_info p{padding: 6px 0 10px 10px}
+.banner_phone_note .banner_center .banner_info a{width:210px;font-size:15px;height:46px;line-height:46px;}
+.banner_phone_note .banner_center .banner_info a i{margin:2px 14px;}
+/*.banner_phone_note .banner_center .banner_info span{width:290px;}*/
+
+.installation_help_box{width:1100px;margin:0 auto;padding:80px 0;}
+.installation_help_box h2{text-align:center;font-size:30px;color: #2b4464;margin-bottom:90px;}
+.installation_help_box .help_list{width:1100px;text-align: center;}
+/*.installation_help_box .help_list .list{float:left;}*/
+.installation_help_box .help_list .list{width:30%;display:inline-block;text-align:left;vertical-align: top;}
+.installation_help_box .help_list .list h4{color:#585858;font-size:24px;}
+.installation_help_box .help_list .list span{color:#585858;font-size:18px;line-height:35px;}
+.installation_help_box .help_list .line{background:url(line.jpg) no-repeat;width:1px;height:235px;margin:0 70px;display: inline-block}
+.installation_help_box .installation_help_text{text-align:center;font-size:18px;color:#585858;}
+.installation_help_box .installation_help_text a{color: #2b4464  }
+.installation_help_box .installation_help_text a:hover{text-decoration:underline;}
+
+.move_bg{background-image:url(img_bg1.jpg);height:590px;position:relative;width:100%;background-attachment:fixed;min-width:650px;background-repeat:no-repeat;background-position:50% 0;background-size: 100%}
+.news_bg{background-image:url(img_bg2.jpg);height:590px;position:relative;width:100%;background-attachment:fixed;min-width:650px;background-repeat:no-repeat;background-position:50% 0;background-size: 100%}
+.play_bg{background-image:url(img_bg3.jpg);height:590px;position:relative;width:100%;background-attachment:fixed;min-width:650px;background-repeat:no-repeat;background-position:50% 0;background-size: 100%}
+.active_box{background:#fff;height:590px;width:100%;}
+.active_center{height:590px;margin:0 auto;position:relative;width:1012px;}
+.active_center .active_text{position:absolute;bottom:130px;width:400px;}
+.active_center .move_text{right:0;text-align:right;}
+.active_center .news_text{left:0;}
+.active_center .play_text{right:0;text-align:right;}
+.active_center .active_text h2{font-size:60px;color:#343434;font-weight:normal;margin-bottom:40px;}
+.active_center .active_text span{display:block;font-size:15px;color:#585858;line-height:38px;}
+.active_center .active_phone{position:absolute;left:0;top:-270px;text-align:left;}
+.active_center .news_phone{right:0;left:inherit;text-align:right;}
+.active_center .active_phone img{width:85%;}
+.active_phone_note .active_center .active_phone{top:-95px;}
+.active_phone_note .active_center .active_phone img{width:65%;}
+
+.footer_box{width:100%;background:#3a3939;padding:74px 0;}
+.footer_center{width:1012px;margin:0 auto;text-align:center;font-size:14px;color:#adadad;line-height:30px;}
+.footer_center a{color:#adadad;}
+
+.pop_bg, .help_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    z-index: 1000;
+    display: none;
+}
+
+.pop_box{width:772px;height:468px;background:#fff;position:fixed;top:50%;margin-top:-234px;left:50%;margin-left:-386px;z-index:1100;border-radius:5px;display:none;}
+.pop_box a.close{display:block;width:38px;height:38px;border-radius:50%;background:#f5f5f5;float:right;margin:12px;font-size:30px;text-align:center;line-height:35px;color:#000;transition:all 0.2s linear 0s;}
+.pop_box a.close:hover{background: #2b4464;color:#fff;}
+.pop_box .title{width:565px;text-align:center;font-size:18px;color:#000;margin:90px 0 40px 104px;}
+.pop_box .pop_detail{width:565px;margin-left:104px;}
+.pop_box .pop_detail img{float:left;width:190px;height:190px;margin-right:35px;}
+.pop_box .pop_detail .btn_list{float:left;}
+.pop_box .pop_detail .btn_list a{display:block;width:318px;height:58px;border:1px solid #000;border-radius:5px;line-height:58px;font-size:18px;color:#000;margin:18px 0 26px;font-weight:bold;transition:all 0.2s linear 0s;}
+.pop_box .pop_detail .btn_list a i{display:inline-block;width:40px;height:40px;float:left;margin:10px 20px 10px 70px;transition:all 0.2s linear 0s;}
+.pop_box .pop_detail .btn_list a i.iphone-icon{background:url(icon1.png) no-repeat 0 -40px;}
+.pop_box .pop_detail .btn_list a i.android-icon{background:url(icon1.png) no-repeat -40px -40px;}
+.pop_box .pop_detail .btn_list a:hover{background:#000;color:#fff;}
+.pop_box .pop_detail .btn_list a:hover i.iphone-icon{background:url(icon1.png) no-repeat 0 0;}
+.pop_box .pop_detail .btn_list a:hover i.android-icon{background:url(icon1.png) no-repeat -40px 0;}
+.pop_box .pop_detail .btn_list a:active{position:relative;top:2px;}
+.pop_box .text{width:565px;text-align:center;font-size:18px;color:#000;margin-left:104px;margin-top:40px;}
+.pop_box .text a{color: #008acf;}
+.pop_box .text a:hover{text-decoration:underline;}
+
+.help_box{width:70%;height:590px;background:#fff;position:fixed;top:40%;left:15%;margin-top:-234px;z-index:1100;border-radius:5px;display:none;}
+.help_box a.close{display:block;width:38px;height:38px;border-radius:50%;background:#f5f5f5;float:right;margin:12px;font-size:30px;text-align:center;line-height:35px;color:#000;transition:all 0.2s linear 0s;}
+.help_box a.close:hover{background: #2b4464;color:#fff;}
+.help_box .title{width:80%;font-size:18px;color:#000;margin:30px auto;}
+.help_box .title .title-user{color: #008acf;display: block;margin-bottom: 10px;font-weight: bold;}
+.help_box .title .title-content{font-size: 15px}
+.help_box .container .imgTe{float: left;width: 22%;text-align: center;padding: 10px;font-size: 14px}
+.help_box .container .imgTe img{margin: 0 auto;max-width: 250px;}
+.help_box .container .imgTe p{height: 48px;padding-bottom: 10px}
+.help_box .container .imgTe .img-responsive { display: block;max-width: 100%;height: 360px;}
+
+
+/*
+.page-1{display:none;}
+.page-2{display:none;}
+.page-3{display:none;}
+.page-4{display:none;}
+.page-5{display:none;}
+.page-6{display:none;}
+.page-7{display:none;}
+*/
+.top-right{display:none;}
+.main{display:none;}
+.page-bg{display:none;}
+.weixin_none{display: none}
+
+@media only screen and (max-width: 1024px) {
+    .header_center{width:100%;}
+    .banner_center{width:100%;}
+    .banner_center .banner_phone{margin-bottom:-331px;}
+    .banner_center .banner_phone img{width:75%;}
+    .banner_center .banner_info{margin-bottom:-284px;}
+    .banner_center .banner_info img{width:60%;}
+    .banner_center .banner_info a{width:288px;font-size:16px;height:48px;line-height:48px;}
+    .banner_center .banner_info a i{margin:4px 14px 4px 60px;}
+    .banner_center .banner_info span{width:290px;}
+    .banner_center .banner_info .banner_note{width: inherit;display: inline-block;padding-right: 8px}
+
+    .installation_help_box{width:100%;}
+    .installation_help_box h2{margin-bottom:50px;}
+    .installation_help_box .help_list{width:100%;margin-bottom:50px;}
+    .installation_help_box .help_list .list{width:25%;}
+    .installation_help_box .help_list .list h4{font-size:20px;margin-bottom:8px;}
+    .installation_help_box .help_list .list span{font-size:16px;line-height:28px;}
+    .installation_help_box .help_list .line{margin:0 5%;}
+    .active_center{width:100%;}
+    .active_center .active_phone img{width:75%;}
+    .footer_center{width:100%;}
+}
+@media only screen and (max-width: 768px) {
+    .active_center .active_text h2{font-size:50px;margin-bottom:30px;}
+    .active_center .active_text span{font-size:15px;}
+    .pop_box{width:630px;margin-left:-315px;}
+    .pop_box .title{width:630px;margin:90px 0 40px 0;}
+    .pop_box .pop_detail{margin-left:32px;}
+    .pop_box .text{margin-left:32px;}
+    .help_box{width: 630px;left: 50px;height: 540px}
+    .help_box .container .imgTe{width: 21%}
+    .help_box .container .imgTe .img-responsive { display: block;max-width: 100%;height: 300px;}
+}
+
+@media only screen and (max-width: 650px) {
+    .header_box{min-width:650px;}
+    .header_center{width:650px;}
+
+    .banner_box{min-width:650px;}
+    .banner_center{width:650px;}
+
+    .installation_help_box{width:650px;}
+
+    .active_box{min-width:650px;}
+    .active_center{width:650px;}
+
+    .footer_box{min-width:650px;}
+    .footer_center{width:650px;}
+}
+@media only screen and (min-width: 1366px) {
+    .help_box .container .imgTe{width: 22.9%}
+}
