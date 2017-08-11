@@ -28,9 +28,6 @@
         var v = 0;
         var a = -0.01;
 
-
-
-
         function init() {
             stat = new Stats();
             stat.domElement.style.position = 'absolute';
@@ -47,7 +44,6 @@
             camera.position.set(10, 5, 5);
             camera.lookAt(new THREE.Vector3(0, 3, 0));
             scene.add(camera);
-
 
             //准备坐标轴
             drawAxes(scene);
@@ -155,7 +151,6 @@
         function updateControls()
         {
             controls.update();
-
         }
     </script>
 </head>
