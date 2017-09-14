@@ -1,0 +1,27 @@
+{
+  "title": {
+    "show": "true",
+    "text": "柱形图和折线图",
+    "link": "http://www.baidu.com",
+    "target": "blank",
+    "textStyle": {
+      "color": "#333",
+      "fontStyle": "normal",
+      "fontWeight": "bolder",
+      "fontFamily": "sans-serif",
+      "fontSize": 18
+    },
+    "subtext": "副标题（数据纯属虚构）",
+    "sublink": "http://echarts.baidu.com/option.html#title.subtext",
+    "padding": 5,
+    "itemGap": 10,
+    "left": "auto",
+    "top": "auto",
+    "right": "auto",
+    "bottom": "auto",
+    "backgroundColor": "transparent"
+  },
+
+  "arr": [24,30,40,43,34,54,57]
+
+}

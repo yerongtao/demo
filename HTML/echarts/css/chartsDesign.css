@@ -1,0 +1,37 @@
+*{ margin:0; padding: 0}
+
+body{background-color: #6F6F7E;}
+
+/*--------图形展示----------*/
+#showCharts{
+    margin: 35px auto; padding: 35px; position: absolute;z-index: 99;
+    top: 45px; left: 0; bottom: 0; right: 0;
+    width: 47%;height: 670px;background-color: #F2EAEA;
+}
+#myChart{width: 90%;height: 90%;margin: 18px auto/*;background-color: #fff*/}
+
+/*--------参数调整----------*/
+#parameterAdjustment{
+    float: left; width: 47%;height: 670px;background-color: #F2EAEA;
+    margin: 35px auto; padding: 10px; position: absolute;
+    top: 45px; left: 0; bottom: 0; right: 0;}
+
+.btn-group{float: right}
+
+.tab-content{height: 380px}
+
+.modal-content{background-color: #5B5D6B;width:650px}
+h3{font-size: 18px;font-family: 微软雅黑;color: #0AC927;font-weight: 800}
+em{font-size: 13px;font-family: 微软雅黑;color: #FaFaFa;font-weight: 300}
+.dtm-tab0-coni{width:618px;height: 384px; position:absolute;background-color: #8d908e;margin: 5px auto;margin-top: 0}
+.dtm-con-item{margin:10px;display:inline-block;width:180px;cursor:pointer}
+.dtm-con-item img{display:block;width:180px;height:93px}
+
+
+.nav-tabs{border-bottom:1px solid #8d908e}
+.nav-tabs li:active, .nav-tabs li.active a, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover{background-color: #8d908e;color: #fff;border-top-width: 0;border-left-width: 0;border-right-width: 0;}
+.nav-tabs li a:hover{background-color: #CBCAC9;color: #6D6F6E;border-width: 0;}
+
+.myFont{font-size: 14px;color: #FaFaFa;font-weight: 300;font-family: 微软雅黑}
+
+.modal-footer{border-top: 1px solid #8d908e;padding: 10px 15px}

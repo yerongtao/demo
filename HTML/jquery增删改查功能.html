@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery实现table增删改查</title>
+</head>
+<style type="text/css">
+    table, td{
+        font:100% '微软雅黑';
+    }
+    table{width:80%;border-collapse:collapse}
+    th, td{text-align:center;border:1px solid #fff;}
+    th{background-color: #f0ad4e}
+    td{background-color: #f0e68c}
+</style>
+<body>
+    <button id="add_btn">新增</button>
+    <input id="Ktext" type="text"><button id="search_btn">查询</button>
+    <button id="back_btn">返回</button>
+    <br/>
+<table id="tb">
+    <tr class="trr">
+        <th>ID</th>
+        <th>Name</th>
+        <th>salary</th>
+        <th>功能</th>
+    </tr>
+
+    <tbody id="hide_tbody">
+        <tr style="display:none" class="trr">
+            <td class="no_id"><input value='' type='text'></td>
+            <td><input value='' type='text'></td>
+            <td><input value='' type='text'></td>
+            <td class="a"><a href="#" class="save_btn">保存</a>
+                          <a href="#" class="edit_btn" style="display:none">修改</a>
+                          <a href="#" class="del_btn">删除</a>
+            </td>
+        </tr>
+    </tbody>
+
+    <tbody id="show_tbody">
+    <tr class="trr" >
+        <td class="no_id">1</td>
+        <td>小王</td>
+        <td>3000</td>
+        <td class="a"><a href="#" class="save_btn" style="display:none">保存</a>
+            <a href="#" class="edit_btn">修改</a>
+            <a href="#" class="del_btn">删除</a></td>
+    </tr>
+    <tr class="trr">
+        <td class="no_id">2</td>
+        <td>小李</td>
+        <td>4000</td>
+        <td class="a"><a href="#" class="save_btn" style="display:none">保存</a>
+            <a href="#" class="edit_btn">修改</a>
+            <a href="#" class="del_btn">删除</a></td>
+    </tr>
+    <tr class="trr">
+        <td class="no_id">3</td>
+        <td>小张</td>
+        <td>5000</td>
+        <td class="a"><a href="#" class="save_btn" style="display:none">保存</a>
+            <a href="#" class="edit_btn">修改</a>
+            <a href="#" class="del_btn">删除</a></td>
+    </tr>
+    <tr class="trr">
+        <td class="no_id">4</td>
+        <td>小赵</td>
+        <td>6000</td>
+        <td class="a"><a href="#" class="save_btn" style="display:none">保存</a>
+            <a href="#" class="edit_btn">修改</a>
+            <a href="#" class="del_btn">删除</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var tb = $("#tb");
+
+        //添加
+        $("#add_btn").click(function(){
+            var hideTr = $("#hide_tbody",tb).children().first();
+            var newTr = hideTr.clone().show();
+            $("#show_tbody",tb).append(newTr);
+        });
+
+        //保存
+        $(".save_btn",tb).die('click').live('click',function(){
+            var tr = $(this).parent().parent();
+            $("input[type='text']",tr).each(function(i,el){
+                el = $(el);
+                el.parent().text(el.val());
+                el.remove();
+            });
+            $(".save_btn",tr).hide();
+            $(".edit_btn",tr).show();
+        });
+
+        //修改
+        $(".edit_btn",tb).die('click').live('click',function(){
+            var tr = $(this).parent().parent();
+            $("td:not('.a')",tr).each(function(i,el){
+                el = $(el);
+                var html = "<input value='"+el.text()+"' type='text'>";
+                el.html(html);
+            });
+            $(".edit_btn",tr).hide();
+            $(".save_btn",tr).show();
+        });
+
+        //删除
+        $(".del_btn",tb).die('click').live('click',function(){
+            $(this).parent().parent().remove();
+        });
+
+        //查询
+        $("#search_btn").click(function(){
+            var key = $("#Ktext").val();
+            var sbody = $("#show_tbody");
+            var trr = $(".trr",sbody);
+            var keyword = $(".no_id",sbody).text();
+            for(var i = 0; i < keyword.length;i++)
+            {
+                if(keyword[i]== key[0]){
+                    trr.eq(i).show();
+                }else{
+                    trr.eq(i).hide();
+                }
+            }
+        });
+        //返回
+        $("#back_btn").click(function(){
+            var sbody = $("#show_tbody");
+            $(".trr",sbody).show();
+
+        });
+    });
+</script>
+
+</body>
+</html>

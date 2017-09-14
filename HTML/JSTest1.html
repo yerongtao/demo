@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript Test</title>
+</head>
+<body>
+<p>JavaScript 能够直接写入HTML输出流中：</p>
+<script>
+    document.write("<h1>This is a heading </h1>");
+    document.write("<p>This a paragraph</p>");
+</script>
+<p>
+    您只能在HTML输出流中使用<strong>document.write</strong>.
+    如果您在文档中已加载后使用它（比如在函数中），会覆盖整个文件
+</p>
+<hr/>
+<p>JavaScript 能够对事件作出反应，比如对按钮的点击：</p>
+<button type="button" onclick="alert('Welcome!')">点这里</button>
+<hr/>
+<p id="demo"> JavaScript 能改变HTML元素的内容</p>
+<script>
+    function myFunction(){
+    x=document.getElementById("demo");//找着demo这个元素
+    x.innerHTML="Hello JavaScript!";//改变内容
+    }
+</script>
+<button type="button" onclick="myFunction()" > 点我改变</button>
+<hr/>
+<script>
+    function myFunction2(){
+        x=document.getElementById("demo");
+        if(x.textContent!='Hello') {
+            x.innerHTML="Hello";
+        }
+        else x.innerHTML="Java";
+    }
+</script>
+<button type="button" onclick="myFunction2()">点这里</button>
+</body>
+</html>

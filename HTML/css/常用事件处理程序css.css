@@ -1,0 +1,15 @@
+#background {
+    width: 300px;
+    height: 100px;
+    border: 1px gray solid ;/*加边框线，1像素，灰色，实线*/
+    margin-top: 20px;
+}
+#background p {
+    font-size: 30px;
+    padding-left: 40px;
+}
+#mouseEvent {
+    font-size: 20px;
+    color: #ff9900;/*颜色*/
+    text-decoration: underline;/*加下划线*/
+}

@@ -1,0 +1,485 @@
+@charset "utf-8";
+*{
+    padding:0;
+    margin:0;
+}
+body{
+     background: #8f8f8f url("../image/Blog/bg.gif") repeat-y center;/*添加背景图片，纵向扩展，居中*/
+ }
+/*------把自定义的Web字体嵌入到网页中------*/
+@font-face {/*使用自定义字体*/
+    font-family: 'LeagueGothicRegular';
+    src: url('../fonts/League_Gothic-webfont.eot');
+    src: local('☺'), url('../fonts/League_Gothic-webfont.woff') format('woff'),
+                     url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+                     url('../fonts/League_Gothic-webfont.svg#webfont1Lb5Pdit') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {/*使用自定义字体*/
+    font-family: 'LaneNarrowRegular';
+    src: url('../fonts/LANENAR_-webfont.eot?') format('eot'),
+         url('../fonts/LANENAR_-webfont.woff') format('woff'),
+         url('../fonts/LANENAR_-webfont.ttf') format('truetype'),
+         url('../fonts/LANENAR_-webfont.svg#webfontMAZXZguX') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#page{
+    width: 960px;/*宽度960像素*/
+    margin: 0 auto;/*距离上方0像素，左右自适应*/
+}
+
+/* ----anchor---- */
+a, a:link{/*超联系默认状态*/
+    color:#6db0da;
+    text-decoration:none;
+}
+a:hover, a:active{/*鼠标悬浮和点击状态*/
+    color:#6db0da;
+    text-decoration:underline;
+}
+
+/*------- headers -------*/
+h2, h3{
+    font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;/*h2h3标题统一设置字体*/
+    text-transform:uppercase;/*控制文本的大小写,uppercase仅有大写字母*/
+    color:#575757;/*统一设置颜色*/
+    margin-bottom:20px;/*一个元素的底部与另外一个元素之间的距离，这个距离称为下外边距*/
+}
+h2{
+    font-size: 72px;/*字体大小*/
+    line-height: 80px;/*行高*/
+}
+h3{
+    font-size: 40px;
+    line-height: 45px;
+}
+h4{
+    font-size: 14px;
+    line-height: 20px;
+    color: #575757;/*颜色和h2h3保持一致*/
+    margin-bottom: 20px;/*下外边距和h2h3保持一致*/
+}
+p{
+    line-height: 20px;
+    margin-bottom: 20px;
+    color:#8c8c8c;/*设置颜色*/
+}
+/*--------left right---------*/
+aside{
+    float: left;/*元素向左浮动*/
+    width: 248px;/*设置元素的宽度为248像素*/
+    position: fixed;/*生成绝对定位的元素，相对于浏览器窗口进行定位*/
+    padding-top: 10px;/*上内边距*/
+}
+#main-content{
+    float:right;/*元素向右浮动*/
+    width:670px;/*设置元素宽度为670像素*/
+}
+/*-------left nav ------*/
+nav{
+    text-align: center;
+    margin-bottom: 50px;
+}
+nav .logo{
+    font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
+    font-size: 43px;
+    text-transform: uppercase;
+    text-align: center;/*文本对齐方式，居中对齐*/
+    color: #a08784;
+    text-decoration: none;/*文本添加修饰*/
+    margin:20px 0;
+    display:block;
+    font-weight:normal;
+    text-shadow: #fff 0 1px 0;/*添加阴影部分*/
+}
+nav .logo span{
+    font-size: 18px;
+    display: block;
+    background: url("../image/Blog/a_portfolio_bg.png") no-repeat center;
+    color: #c4bab7;
+    font-weight: normal;
+}
+nav ul{
+    font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
+    font-size:30px;
+    padding-top:30px;
+    background:url(../image/Blog/nav_bg.png) no-repeat top center;
+    text-transform:uppercase;
+    list-style-type:none/*清除前面的那个点*/
+}
+nav ul li{
+    position:relative;
+    margin-top:-7px;/*上外边距*/
+}
+nav ul li a, nav ul li a:link{/*a:link未访问的链接*/
+    color:#7d6865;
+    text-decoration:none;
+    padding:10px 0 10px 0;
+    display:block;
+    text-shadow: #fff 0 1px 0;/*设置阴影*/
+}
+nav ul li a:hover{/*a:hoverr鼠标浮动到上面时的链接*/
+    color:#634d4a;/*颜色加深*/
+    text-decoration:none;
+}
+nav ul li.active{
+    background:url(../image/Blog/nav_active.png) no-repeat 26px .1em;/*动作背景图，不扩展*/
+}
+nav ul li.active a{
+    color:#fff;
+    text-shadow: #2b0d09 0 1px 0;
+}
+nav .bg_bottom{
+    background:url(../image/Blog/nav_bg.png) no-repeat bottom center;
+    height:30px;
+}
+
+/*----- right main-content ------*/
+.ribbon{
+    background: url("../image/Blog/ribbon.png") no-repeat;
+    position: absolute;
+    width: 152px;
+    height: 132px;
+    z-index:999999999;
+    margin:-4px 0 0 -4px;
+}
+.ps_container{
+    /*display:none;*/
+    width:656px;
+    height:345px;
+    margin:20px auto 80px auto;
+    position:relative;
+    background:url(../image/Blog/slider_bg.png) no-repeat center;
+}
+.ps_image_wrapper{
+    width:656px;
+    height:345px;
+    overflow:hidden;
+    position:relative;
+    margin:0 auto;
+}
+.ps_image_wrapper img{
+    position:absolute;/*生成绝对定位的元素，相对于上一个父元素进行定位*/
+    left:10px;
+    top:10px;
+}
+/*------ 滚动图片上的左右箭头 ------*/
+.ps_prev{
+    background:transparent url(../image/Blog/prev.png) no-repeat top center;
+    left:15px;/*左外边距，左边距离父元素左边框15像素*/
+}
+.ps_next{
+    background:transparent url(../image/Blog/next.png) no-repeat top center;
+    right:15px;/*右外边距，右侧距离父元素右边框15像素*/
+}
+.ps_prev, .ps_next{
+    width:30px;
+    height:59px;
+    position:absolute;/*生成绝对定位的元素，相对于上一个父元素进行定位*/
+    top:50%;
+    margin-top:-40px;
+    cursor:pointer;
+    opacity:0.5;
+}
+.ps_prev:hover, .ps_next:hover{/*鼠标悬浮状态*/
+    opacity:0.9;/*设置不透明度*/
+}
+/*------- li -------*/
+ul.ps_nav{
+    list-style:none;/*去掉前面的点*/
+    padding:0;
+    width:120px;/*宽度120像素*/
+    margin:20px auto;/*距上方20像素，左右自适应，效果为居中*/
+    position:relative;/*生成相对定位的元素，相对于其正常位置进行定位*/
+}
+ul.ps_nav li{
+    float:left;/*元素向左浮动*/
+}
+ul.ps_nav li a{
+    display:block;
+    text-indent:-99999px;
+    width:15px;/*宽度*/
+    height:13px;/*高度*/
+    outline:none;
+    padding:0 3px;
+    background: transparent url(../image/Blog/dot2.png) no-repeat top center;/*背景色透明，不扩展，向上居中*/
+}
+
+ul.ps_nav li a:hover,ul.ps_nav li.selected a{/*鼠标悬浮状态和选中状态*/
+    background-position:50% -13px;
+}
+ul.ps_nav li.ps_preview{/*装小图的容器*/
+    display:none;
+    width:85px;
+    height:91px;
+    top:-95px;/*向上偏移95像素*/
+    left:-34.5px; /*向左偏移34.5像素*/
+    position:absolute;/*生成绝对定位的元素，相对于上一个父元素进行定位*/
+}
+ul.ps_nav li.ps_preview span{/*将小三角放入父元素的下方居中位置*/
+    background:transparent url(../image/Blog/triangle.png) no-repeat  center;
+    width:15px;
+    height:6px;
+    position:absolute;/*生成绝对定位的元素，相对于上一个父元素进行定位*/
+    top:85px;/*距父元素上边框85像素，91-6=85*/
+    left:35px;/*距父元素左边框35像素，（85-15）/2=35*/
+}
+.ps_preview_wrapper{/*设置一个白色的边框*/
+    width:75px;
+    height:75px;
+    border:5px solid #fff;/*设置边框属性，宽度为5像素，实心，白色*/
+    overflow:hidden;
+    position:relative;/*生成相对定位的元素，相对于其正常位置进行定位*/
+    -moz-box-shadow:0 0 5px #999;
+    -webkit-box-shadow:0 0 5px #999;
+    box-shadow:0 0 5px #999;/*设置一个5像素，灰色的阴影部分*/
+}
+.ps_preview_wrapper img{
+    position:absolute;/*生成绝对定位的元素，相对于上一个父元素进行定位*/
+    top:0;
+    left:0;
+}
+
+/* ----sections---- */
+#home, #work, #about, #contact{
+    position:relative;/*生成相对定位的元素，相对于其正常位置进行定位*/
+    margin-bottom:100px;/*下外边距500像素*/
+    float:left;/*元素向左浮动*/
+    width:100%;/*基于父元素宽度的百分比宽度*/
+    padding-top:15px;/*上内边距*/
+}
+#top{
+    margin-bottom:0;/*下外边距*/
+}
+#work, #about, #contact, .columns, .intro-text{
+    padding:10px;/*设置元素所有内边距的宽度*/
+}
+
+/* ----divider---- */
+.divider {
+    text-align:center;
+}
+.divider h2{
+    background:url(../image/Blog/border_bg.gif) repeat-x bottom left;/*横向扩展，左下方*/
+    margin-bottom:20px;/*下外边距*/
+}
+#main-content section .intro-text h2{
+    font-family:"LaneNarrowRegular", Arial, Helvetica, sans-serif;/*设置字体*/
+    font-size:40px;
+    line-height:44px;
+    padding-bottom:20px;
+}
+
+/* ----columns---- */
+.columns{
+    float:left;
+    width:100%;
+    margin-bottom:20px;
+}
+.two-column{/**/
+    float:left;
+    width:300px;
+    margin-right:44px;
+}
+.three-column{
+    width:200px;/*宽度200像素*/
+    float:left;/*元素向左浮动*/
+    margin-right:30px;/*右外边距30像素*/
+}
+.last{
+    margin-right:0;/*右外边距0像素*/
+}
+
+/* ----figure---- */
+figure{
+    -moz-box-shadow:0 0 5px #dfdfdf;
+    -o-box-shadow:0 0 5px #dfdfdf;
+    -webkit-box-shadow:0 0 5px #dfdfdf;
+    box-shadow:0 0 5px #dfdfdf;/*给图片添加5像素的阴影边框*/
+    padding:4px;
+    background: #fff url(../image/Blog/icon_magnify.gif) no-repeat center center;/*不扩展，左右居中，上下居中*/
+    float:left;
+    border:1px solid #d6d6d6;/*声明边框属性 1像素，实心，颜色*/
+    margin-bottom:20px;/*下外边距20像素*/
+    position:relative;/*生成相对定位的元素，相对于其正常位置进行定位*/
+}
+
+figure img{
+    float:left;/*元素向左浮动*/
+}
+
+figure figcaption{
+    position:absolute;
+    bottom:0;
+    margin-bottom:-5px;
+    width:170px;
+}
+figure figcaption a{
+    left:0;
+    position:absolute;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+figure figcaption a:hover{
+    text-decoration:none;
+    color:#343434;
+}
+figure figcaption a span{
+    display:none;
+    position:absolute;
+}
+figure figcaption a:hover span{
+    display:inline;
+}
+
+/* ----testimony---- */
+.testimony blockquote{
+    background:url(../image/Blog/quote.jpg) no-repeat left .4em;
+    float:right;/*元素向右浮动*/
+    width:530px;/*宽度530像素*/
+    padding-left:30px;/*左内边距30像素*/
+}
+.testimony figure{
+    float:left;
+}
+.testimony blockquote p{
+    font-size:18px;/*字体大小*/
+    font-style:italic;/*设置斜体*/
+    color:#8c8c8c;/*设置颜色*/
+    line-height:24px;/*设置行高*/
+    margin-top:10px;/*上外边距*/
+}
+.testimony blockquote cite{
+    display:block;
+    font-size:17px;
+}
+.says{
+    clear:both;
+    margin-bottom:20px;/*下外边距*/
+}
+
+/* ----list---- */
+.list{
+    float:left;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.list li{
+    display:inline;
+    margin-right:44px;/*右外边距为44像素*/
+    float:left;
+    margin-bottom:17px;/*下外边距17像素*/
+}
+.list li.last{
+    margin-right:0;/*右外边距0像素*/
+}
+
+/*------from---------*/
+form {
+    margin-bottom: 40px;
+}
+form input, form textarea {
+    background: url("../image/Blog/input_bg.gif") repeat-x top left;/*设置背景图和扩展方式*/
+    padding: 15px 15px;/*设置内边距*/
+    font-size: 18px;/*设置字号大小*/
+    border: none;/*设置边框为无边框*/
+}
+#name, #email, #url, #message {
+    font-family: Groria, "Times New Roman", Times, serif;
+    color: #575757;
+}
+#name, #email, #url {
+    width: 400px;/*设置前面三个输入框的长度为400像素*/
+}
+#message {
+    width: 90%;/*设置message输入框的长度为父级容器的90%*/
+}
+form .button {
+    width: 237px;
+    height: 47px;
+    background: url("../image/Blog/button.gif") no-repeat left;
+    border: 0;
+    text-transform: uppercase;
+    font-family: "LaneNarrowRegular", Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: #7d271a 0 1px 0;
+}
+
+/*-----social_wrapper-------*/
+.social_wrapper {
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #e7e7e7;/*上边框*/
+    border-bottom: 1px solid #e7e7e7;/*下边框*/
+}
+.social_wrapper h3 {
+    margin-bottom: 0;
+    float: left;
+}
+.social {
+    padding: 0;
+    margin: 7px 0 0 0;
+    float: right;
+    width: 370px;
+}
+.social li {
+    text-indent: -9999999px;
+    display: block;
+    float: left;
+    margin: 0 4px;
+}
+.social li.dribble a {
+    background: url("../image/Blog/icon_dribble.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li.twitter a {
+    background: url("../image/Blog/icon_twitter.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li.lastfm a {
+    background: url("../image/Blog/icon_lastfm.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li.facebook a {
+    background: url("../image/Blog/icon_facebook.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li.location a {
+    background: url("../image/Blog/icon_location.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li.forrst a {
+    background: url("../image/Blog/icon_forrst.png") no-repeat;
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+.social li a {
+    opacity: .5;/*设置透明度为0.5*/
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;/*设置渐变样式，当鼠标移入和移出时的切换效果*/
+}
+.social li a:hover {
+    opacity: 1;/*设置鼠标悬停在超链接上时图标的透明度*/
+}
+

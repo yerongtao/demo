@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Modified by yerongtao on 2017/02/07-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>firstChart</title>
+    <link rel="stylesheet" href="css/firstChart_2.css"/>
+
+</head>
+
+<body>
+
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div style="width: 600px;height: 20px">
+    <button>数据编辑</button>
+    <button>参数调整</button>
+    <div id="myBarChart"></div><!--柱形图，折线图-->
+</div>
+<div style="width: 600px;height: 20px;margin-top: 10px">
+    <button>数据编辑</button>
+    <button>参数调整</button>
+    <div id="myPieChart"></div><!--饼图-->
+</div>
+
+<div style="width: 300px;height: 80px;background-color: #bfbfbf;float: left">
+    <p id="clickBarChart">clickBarChart</p>
+    <p id="clickPieChart">clickPieChart</p>
+</div>
+<div id="LinearGradientChart"></div><!--线性渐变柱形图-->
+<div id="AccumulationChart"></div><!--堆积柱形图-->
+<div id="visualMapChart"></div><!--颜色可视化-->
+
+
+
+<!-----引用jquery和echarts---->
+<script type="text/javascript" src="JS/jquery-3.1.1.js"></script>
+<script src="JS/echarts.main.js"></script>
+<!--echarts绘制的图形使用不同主题-->
+<script type="text/javascript" src="theme/macarons.js"></script>
+<script type="text/javascript" src="theme/infographic.js"></script>
+<script type="text/javascript" src="theme/roma.js"></script>
+<script type="text/javascript" src="theme/shine.js"></script>
+<!--绘制图形代码-->
+<script type="text/javascript" src="JS/firstChart_2.js"></script>
+
+</body>
+
+
+</html>

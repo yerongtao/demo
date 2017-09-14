@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript常用事件处理程序</title>
+    <!--调用样式Style-->
+    <link rel="stylesheet" href="css/常用事件处理程序css.css"/>
+    <!--调用JS脚本-->
+    <script type="text/javascript" src="js/常用事件处理程序js.js"></script>
+</head>
+
+<body>
+
+<!--鼠标单击事件-->
+<input type="button" id="click" name="bt_click" value="鼠标单击"/>
+<p id="bt_click_p"></p>
+
+<!--鼠标双击事件-->
+<input type="button" id="dblclick" name="bt_dblclick" value="鼠标双击"/>
+<p id="bt_dblclick_p"></p>
+
+<!--鼠标单击，改变容器的背景颜色和内容-->
+<input type="button" id="ChangeBackgroundColor" onclick="ChangeBgFunction()" value="点我随机改变下图的背景颜色"/>
+<div id="background">
+    <p id="backgroundText">看我,我会变哦</p>
+</div>
+
+<!--鼠标按下和松开，改变字体颜色，模拟a标签的超链接效果-->
+<p id="mouseEvent" onmousedown="mouseDown()" onmouseup="mouseUp()">鼠标点击，模拟超链接效果</p>
+
+<!--鼠标移入移出，不点击，获取焦点-->
+<input type="button" onclick="addImages()" value="点击按钮添加图片"/>
+<!--使用脚本方式添加图片到页面上-->
+<div id="addImages"></div>
+<div id="add"></div>
+<p>鼠标放到下方图片上获取焦点</p>
+<img src="image/flower2.jpg" alt="图片2" onmousemove="visibile(this,0.5)" onmouseout="visibile(this,1)"/>
+<!--使用键盘上的按键对页面进行操作-->
+<p>键盘事件：A->刷新网页 B->弹出信息</p>
+
+
+
+
+</body>
+
+</html>

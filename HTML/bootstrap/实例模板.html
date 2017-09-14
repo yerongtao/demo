@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title></title>
+    <style>
+        body{padding-top: 70px;}/*设置body元素的padding-top为70，为了让导航条不挡住页面其他元素*/
+    </style>
+</head>
+<body>
+
+<!-------------导航条模板-------------->
+<!--在nav标签的class里添加属性，改变样式
+--navbar-fixed-top 固定导航条在顶部
+--navbar-fixed-bottom 固定导航条在底部
+--navbar-inverse 使导航条背景变成黑色
+-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="containeer-fluid"><!--containeer、containeer-fluid两种class-->
+        <div class="navbar-header"><!--响应式布局，当浏览器宽度小于某个值时执行下面button标签和a标签代码-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navgation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">A link</a></li>
+                    <li><a href="#">B link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">C link</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+
+<!-------------标签页模板------------>
+<div>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#Home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#Profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#Messages" role="tab" data-toggle="tab">Messages</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="Home">...在这里放内容Aa</div>
+        <div class="tab-pane" id="Profile">...在这里放内容Bb</div>
+        <div class="tab-pane" id="Messages">...在这里放内容Cc</div>
+    </div>
+</div>
+
+<!------------滚动图片模板----------->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="..." alt="...">
+            <div class="carousel-caption">
+                ...
+            </div>
+        </div>
+        <div class="item">
+            <img src="..." alt="...">
+            <div class="carousel-caption">
+                ...
+            </div>
+        </div>
+        ...
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!--------------弹出框-------------->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#about">弹出框</button>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="about">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script type="text/javascript" src="JS/jquery/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="JS/bootstrap-3.3.7/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/**
+ * Created by yerongtao on 2017/4/21.
+ */
+
+/****¹ö¶¯¹ã¸æ****/
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true
+    });
+
+});

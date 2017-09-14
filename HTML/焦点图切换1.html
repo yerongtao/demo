@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鼠标悬浮切换</title>
+    <style>
+        #box {
+            width: 636px;
+            height: 325px;
+            position: relative;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 636px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        ul li{
+            width: 636px;
+            display: none;
+        }
+        ol{
+            z-index: 2;
+            width: 120px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        ol li{
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 2px;
+            display: inline;
+            background: #fff;
+            color: #f60;
+            line-height: 20px;
+            text-align: center;
+        }
+        ol .active{
+            background: #f60;
+            color: #fff;
+            }
+        img{
+            border: none;
+            vertical-align: top;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLiUl = oUl.getElementsByTagName('li');
+
+            var oOl = document.getElementsByTagName('ol')[0];
+            var aLiOl = oOl.getElementsByTagName('li');
+
+            for(var i=0;i<aLiOl.length;i++) {
+                aLiOl[i].index = i;/*给ol添加索引*/
+                aLiOl[i].onmouseover = function() {/*鼠标移入元素时触发*/
+                    for(var i=0;i<aLiOl.length;i++) {
+                        aLiOl[i].className = '';
+                        aLiUl[i].style.display = 'none';/*图像不被显示*/
+                    }
+                    this.className = 'active';
+                    aLiUl[this.index].style.display = 'block';/*图像显示出来*/
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li style="display: block"><img src="image/scroll1.jpg" alt=""/></li>
+        <li><img src="image/scroll2.jpg" alt=""/></li>
+        <li><img src="image/scroll3.jpg" alt=""/></li>
+        <li><img src="image/scroll4.jpg" alt=""/></li>
+        <li><img src="image/scroll5.jpg" alt=""/></li>
+    </ul>
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>

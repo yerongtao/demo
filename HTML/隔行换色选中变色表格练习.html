@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格隔行换色选中变色</title>
+    <style>
+        th{/*设置表头样式*/
+            font: 25px Arial;/*字体字号*/
+            text-align: left;/*对齐方式:向左对其*/
+            padding: 5px;/*内边距*/
+            border-bottom: 1px solid #333;/*下边框:1像素宽,实线,颜色*/
+        }
+        .odd{background-color: #00ffff}/*设置奇数行背景颜色*/
+        .even{background-color: #c8c8c8}/*设置偶数行背景颜色*/
+        .action{background-color: #00f}/*设置鼠标悬浮行背景颜色*/
+    </style>
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("tbody tr:even").addClass("even");/*给偶数行添加样式*/
+            $("tbody tr:odd").addClass("odd");/*给奇数行添加样式*/
+            $("tbody tr").hover(/*设置鼠标悬浮时的样式*/
+                    function(){$(this).addClass("action");},/*鼠标移入*/
+                    function(){$(this).removeClass("action");}/*鼠标移开*/
+            )
+        });
+    </script>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>产品名称</th>
+        <th>产地</th>
+        <th>厂商</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>爱美电视机</td>
+        <td>福州</td>
+        <td>爱美电子</td>
+    </tr>
+    <tr>
+        <td>美好微波炉</td>
+        <td>北京</td>
+        <td>美好集团</td>
+    </tr>
+    <tr>
+        <td>联想电脑</td>
+        <td>北京</td>
+        <td>联想集团</td>
+    </tr>
+    <tr>
+        <td>水晶易表</td>
+        <td>广州</td>
+        <td>SAP集团</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

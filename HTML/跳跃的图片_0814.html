@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>跳跃的图片</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 600px;/*宽*/
+            height: 500px;/*高*/
+            border: 1px gray solid;/*边框线*/
+            margin: 50px auto;/*边框位置，距上方50像素，左右自适应*/
+            transform-style: preserve-3d;/*呈现3d效果*/
+            perspective: 1200px;/*远看效果*/
+        }
+        .tu{
+            width: 437px;
+            height: 300px;
+            /*border: 1px red solid;*/
+            display: block;/*呈现方式*/
+            margin: 50px auto;/*位6*/
+            background: url(image/花的心事.jpg) 0px 0px /437px 300px no-repeat;
+            box-shadow: -7px 10px 10px gray;/*加阴影*/
+            transform: rotateX(40deg) rotateY(-3deg) rotateZ(-25deg);/*变形*/
+            transition: all 1s ease-out;/*慢慢变化*/
+        }
+        .tu:hover{/*事件*/
+            transform: rotate3D(0,0,0,0deg);/*变形回到初始状态*/
+            box-shadow: -50px 50px 10px white;/*阴影在变形时扩大，最终变成白色*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><!--div容器，给他一个名字，叫container，这个名字随便起-->
+        <a class="tu" href=""></a>
+    </div>
+
+</body>
+</html>

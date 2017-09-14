@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<input type="text" id="text"/>
+<button id="OK" onclick="func()">确定</button>
+
+
+<script type="text/javascript">
+    /*判断浏览器是否支持本地存储*/
+    /*if (window.localStorage) {
+        alert('This browser supports localStorage');
+    } else {
+        alert('This browser does NOT support');
+    }*/
+
+    /*先给本地数据库赋值*/
+    localStorage.setItem('a','111112');
+    localStorage.setItem('b','撒啊啊啊啊啊');
+
+    var a2 = localStorage.getItem('a');//获取a的值
+    alert(a2);
+
+    function func() {
+        var text = document.getElementById("text").value;
+        alert(text);
+        localStorage.a = text;
+
+    }
+    var obj = [12,32,43,45,56,67,65];
+    var str = JSON.stringify(obj);
+
+    //存入
+    localStorage.obj = str;
+    //读取
+    str = localStorage.obj;
+    //重新转换为对象
+    obj = JSON.parse(str);
+
+</script>
+
+</body>
+</html>

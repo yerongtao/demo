@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/><!--表示强制使用最新的IE浏览器模式渲染页面-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="js/vendor/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="js/vendor/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>demo</title>
+</head>
+<body>
+<!--[if let IE8]-->
+<!--<p class="browserupgrade">珍爱生命，远离IE8以下浏览器 <a href="http://browsehappy.com">下载新版本</a></p>-->
+<!--[endif]-->
+<!--header-->
+<header>
+    <nav class="h-top">
+        <span class="h-tel">热线电话：400-820-8820</span>
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">快速注册</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">APP下载</a></li>
+        </ul>
+    </nav>
+    <nav class="h-main">
+        <a href="#" class="h-brand"><img src="img/logo@1x.png" alt="回到首页"/></a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">理财频道</a></li>
+            <li><a href="#">投资频道</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#">安全保障</a></li>
+        </ul>
+    </nav>
+</header><!-- end header -->
+<!--main-->
+<div class="container">
+    <div class="transaction clearfix">
+        <div class="trans-content">
+            <div class="trans-data">
+                <span>平台累计成交金额</span>
+                <span class="trans-money">8888</span>
+                <span>万元</span>
+            </div>
+            <div class="trans-data">
+                <span>过去7日成交金额</span>
+                <span class="trans-money">1888</span>
+                <span>万元</span>
+            </div>
+            <div class="trans-report">
+                <a href="#">查看平台运营报告</a>
+            </div>
+        </div>
+    </div><!-- end transaction -->
+    <div class="ad">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad001-l.png" media="(min-width: 50em)"/>
+                    <source srcset="img/ad001-m.png" media="(min-width: 30em)"/>
+                    <img src="img/ad001.png" alt="2015年度报告"/>
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad002-l.png" media="(min-width: 50em)"/>
+                    <source srcset="img/ad002-m.png" media="(min-width: 30em)"/>
+                    <img src="img/ad002.png" alt="新年红包"/>
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad003-l.png" media="(min-width: 50em)"/>
+                    <source srcset="img/ad003-m.png" media="(min-width: 30em)"/>
+                    <img src="img/ad003.png" alt="新手秘籍"/>
+                </picture>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="img/ad002-l.png" media="(min-width: 50em)"/>
+                    <source srcset="img/ad002-m.png" media="(min-width: 30em)"/>
+                    <img src="img/ad002.png" alt="年度报告"/>
+                </picture>
+            </div>
+        </div>
+    </div><!-- end ad -->
+    <section class="feature">
+        <div class="item">
+            <h3>安全</h3>
+            <p>国家AAA信用平台<br/>国家AAA信用平台<br/>国家AAA信用平台</p>
+        </div>
+        <div class="item">
+            <h3>权威</h3>
+            <p>国家AAA信用平台<br/>国家AAA信用平台<br/>国家AAA信用平台</p>
+        </div>
+        <div class="item">
+            <h3>省心</h3>
+            <p>国家AAA信用平台<br/>国家AAA信用平台<br/>国家AAA信用平台</p>
+        </div>
+    </section><!-- end feature -->
+    <div class="notice clearfix">
+        <a href="#"><span>2017-01-01</span>元旦期间受理业务及值班公告</a>
+        <a href="#" class="more">更多公告</a>
+    </div><!--end notice -->
+    <section class="product clearfix">
+        <h2>
+            固定期限产品
+            <em>甄选优质产品</em>
+            <em>省时省力</em>
+            <em>保质保量</em>
+        </h2>
+        <div class="product-content">
+            <div class="item clearfix">
+                <h3><em>3</em>个月</h3>
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>6</em>个月</h3>
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>9</em>个月</h3>
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>12</em>个月</h3>
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- end product -->
+    <section class="product clearfix">
+        <h2>
+            固定期限产品
+            <em>甄选优质产品</em>
+            <em>省时省力</em>
+            <em>保质保量</em>
+        </h2>
+        <div class="product-content">
+            <div class="item clearfix">
+                <h3><em>3</em>个月</h3>
+
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>6</em>个月</h3>
+
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>9</em>个月</h3>
+
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <h3><em>12</em>个月</h3>
+
+                <div class="info">
+                    <p>约定年化收率：<span class="year-rate">3,50%<i>起</i></span></p>
+
+                    <p>总成交金额：<span class="money">1888<i>万元</i></span></p>
+                </div>
+                <div class="buy">
+                    <a href="#">购买</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- end product -->
+    <div class="footer">
+        <div class="footer-content clearfix">
+            <p class="brand"></p>
+            <ul>
+                <li class="title"><a href="#">关于我们</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">业务模板</a></li>
+                <li><a href="#">合作机构</a></li>
+                <li><a href="#">服务协议</a></li>
+            </ul>
+            <ul>
+                <li class="title"><a href="#">关于我们</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">业务模板</a></li>
+                <li><a href="#">服务协议</a></li>
+            </ul>
+            <ul>
+                <li class="title"><a href="#">交易帮助</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">业务模板</a></li>
+                <li><a href="#">合作机构</a></li>
+                <li><a href="#">服务协议</a></li>
+            </ul>
+            <ul>
+                <li class="title"><a href="#">合作伙伴</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">业务模板</a></li>
+                <li><a href="#">服务协议</a></li>
+            </ul>
+            <ul>
+                <li class="title"><a href="#">交易帮助</a></li>
+                <li><a href="#">公司介绍</a></li>
+                <li><a href="#">合作机构</a></li>
+                <li><a href="#">服务协议</a></li>
+            </ul>
+        </div>
+    </div><!-- end footer -->
+</div><!-- end main -->
+<!--footer-->
+<footer>
+    <ul>
+        <li><span class="icon icon-zfywxk">支付业务许可证</span></li>
+        <li><span class="icon icon-pcirk">PCI 认证</span></li>
+        <li><span class="icon icon-visayz">Visa 验证</span></li>
+        <li><span class="icon icon-vsjmfw">VerSign加密协议</span></li>
+        <li><span class="icon icon-wlgs">网络工商</span></li>
+        <li><span class="icon icon-rzcx">电子商务协会认证诚信网</span></li>
+        <li><span class="icon icon-gs">北京工商</span></li>
+    </ul>
+    <p>北京市时林电脑公司 @ 2015-2017</p>
+</footer>
+
+<script src="js/vendor/jquery-3.1.1.js"></script>
+<script src="js/vendor/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+<script src="js/vendor/picturefill.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

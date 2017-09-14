@@ -1,0 +1,139 @@
+Microsoft Windows [版本 10.0.14393]
+(c) 2016 Microsoft Corporation。保留所有权利。
+
+C:\Users\yerongtao>D:
+
+D:\>cd D:\时林公司\MyStudyFile\webDemo-001\nodejs\school
+
+D:\时林公司\MyStudyFile\webDemo-001\nodejs\school>dir
+ 驱动器 D 中的卷没有标签。
+ 卷的序列号是 000C-3DA3
+
+ D:\时林公司\MyStudyFile\webDemo-001\nodejs\school 的目录
+
+2017/04/24  13:45    <DIR>          .
+2017/04/24  13:45    <DIR>          ..
+2017/04/24  13:50               256 class.js
+2017/04/24  13:56               245 index.js
+2017/04/24  13:41                85 student.js
+2017/04/24  13:41                85 teacher.js
+               4 个文件            671 字节
+               2 个目录 178,153,598,976 可用字节
+
+D:\时林公司\MyStudyFile\webDemo-001\nodejs\school>node index.js
+Add Teacher:Scott
+
+D:\时林公司\MyStudyFile\webDemo-001\nodejs\school>node index
+Add Teacher:Scott
+
+D:\时林公司\MyStudyFile\webDemo-001\nodejs\school>node
+> url
+{ parse: [Function: urlParse],
+  resolve: [Function: urlResolve],
+  resolveObject: [Function: urlResolveObject],
+  format: [Function: urlFormat],
+  Url: [Function: Url] }
+> url.parse('http://nodejs.cn/api/assert.html')
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: 'nodejs.cn',
+  port: null,
+  hostname: 'nodejs.cn',
+  hash: null,
+  search: null,
+  query: null,
+  pathname: '/api/assert.html',
+  path: '/api/assert.html',
+  href: 'http://nodejs.cn/api/assert.html' }
+> url.parse('http://nodejs.cn:8080/api/assert.html?course=node#floor1')
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: 'nodejs.cn:8080',
+  port: '8080',
+  hostname: 'nodejs.cn',
+  hash: '#floor1',
+  search: '?course=node',
+  query: 'course=node',
+  pathname: '/api/assert.html',
+  path: '/api/assert.html?course=node',
+  href: 'http://nodejs.cn:8080/api/assert.html?course=node#floor1' }
+
+> url.parse('http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1')
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: 'nodejs.cn:8080',
+  port: '8080',
+  hostname: 'nodejs.cn',
+  hash: '#floor1',
+  search: '?from=scott&course=node',
+  query: 'from=scott&course=node',
+  pathname: '/api/assert.html',
+  path: '/api/assert.html?from=scott&course=node',
+  href: 'http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1' }
+> url.format({
+...   protocol: 'http:',
+...   slashes: true,
+...   auth: null,
+...   host: 'nodejs.cn:8080',
+...   port: '8080',
+...   hostname: 'nodejs.cn',
+...   hash: '#floor1',
+...   search: '?from=scott&course=node',
+...   query: 'from=scott&course=node',
+...   pathname: '/api/assert.html',
+...   path: '/api/assert.html?from=scott&course=node',
+...   href: 'http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1' })
+'http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1'
+> url.resolve('http://imooc.com/','/course/list')
+'http://imooc.com/course/list'
+> url.parse('http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1')
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: null,
+  host: 'nodejs.cn:8080',
+  port: '8080',
+  hostname: 'nodejs.cn',
+  hash: '#floor1',
+  search: '?from=scott&course=node',
+  query: 'from=scott&course=node',
+  pathname: '/api/assert.html',
+  path: '/api/assert.html?from=scott&course=node',
+  href: 'http://nodejs.cn:8080/api/assert.html?from=scott&course=node#floor1' }
+> url.parse('//imooc.com/course/list',true)
+Url {
+  protocol: null,
+  slashes: null,
+  auth: null,
+  host: null,
+  port: null,
+  hostname: null,
+  hash: null,
+  search: '',
+  query: {},
+  pathname: '//imooc.com/course/list',
+  path: '//imooc.com/course/list',
+  href: '//imooc.com/course/list' }
+> url.parse('//imooc.com/course/list',true,true)
+Url {
+  protocol: null,
+  slashes: true,
+  auth: null,
+  host: 'imooc.com',
+  port: null,
+  hostname: 'imooc.com',
+  hash: null,
+  search: '',
+  query: {},
+  pathname: '/course/list',
+  path: '/course/list',
+  href: '//imooc.com/course/list' }
+> .exit
+
+D:\时林公司\MyStudyFile\webDemo-001\nodejs\school>

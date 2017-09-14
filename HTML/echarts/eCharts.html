@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>eCharts</title>
+    <link rel="stylesheet" href="css/eCharts.css"/>
+    <script type="text/javascript" src="JS/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="JS/echarts.main.js"></script>
+    <script type="text/javascript" src="theme/macarons.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var myChart = echarts.init(document.getElementById('myBarChart'),'macarons');/*绘制柱形图和折线图*/
+
+            $.get('JSON/eCharts.json').done(function (data) {
+                myChart.setOption({
+//                    title: {
+//                        text: '股份公司万元产值能耗',
+//                        subtext: '异步数据加载示例',
+//                        x:'center'
+//                    },
+                    tooltip: {},
+                    legend: {
+                        data:['当年累计', '上年同期累计','年度指标'],
+                        x:'left'
+                    },
+                    xAxis: {
+                        data: []
+                    },
+                    yAxis: {},
+                    series: [{
+                        name: '当年累计',
+                        type: 'bar',
+                        data: [],
+                        itemStyle:{
+                            normal:{/*默认状态下*/
+                                color:'rgba(1,121,241,0.8)'/*设置颜色和透明度*/
+                            }
+                        }
+                    },
+                        {
+                            name: '上年同期累计',
+                            type: 'bar',
+                            data: [],
+                            itemStyle:{
+                                normal:{/*默认状态下*/
+                                    color:'rgba(61,237,61,0.8)'/*设置颜色和透明度*/
+                                }
+                            }
+                        },
+                        {
+                            name: '年度指标',
+                            type: 'line',
+                            data: [],
+                            itemStyle:{
+                                normal:{/*默认状态下*/
+                                    color:'rgba(250,12,15,0.8)'/*设置颜色和透明度*/
+                                }
+                            }
+                        }]
+                });
+            });
+
+            myChart.showLoading();
+
+            $.get('JSON/eCharts.json', "", function(data){
+//                alert(data.data[0][0]);
+                  myChart.hideLoading();
+                  myChart.setOption({
+                      xAxis: {
+                          data: data.category
+                      },
+                      series: [
+                          {
+                              // 根据名字对应到相应的系列
+                              name: '当年累计',
+                              data: data.data[0]
+                          },
+                          {
+                              name: '上年同期累计',
+                              data: data.data[1]
+                          },
+                          {
+                              name: '年度指标',
+                              data: data.index
+                          }
+                      ]
+                   });
+            });
+
+            /*------------添加日历图片的点击事件-----------*/
+            $("#data_select_icons").click(function() {
+//                alert("啊啊");
+                var data_select = $("#data_select");
+//                alert(data_select);
+                if (data_select.is(':hidden')) {/*当日期选择框隐藏时，给他show出来*/
+                    data_select.show();
+                } else {/*否则就将其隐藏*/
+                    data_select.hide();
+                }
+            });
+
+
+        });
+
+        $(function () {
+            debugger;
+            $.ajax({/*使用ajax方法异步加载页面数据*/
+                type: "get",
+                url: "JSON/eCharts.json",
+                dataType: "json",
+                success: function (data) {
+                    $("#text").html(data.text_file);/*加载分析说明*/
+                    for (var i = 0; i < 3; i++) {/*加载下面网格两行数据*/
+                        var row = $("#content").clone();
+                        row.find("#ID").text(data.object[i].ID);
+                        row.find("#Month1").text(data.object[i].Month1);
+                        row.find("#Month2").text(data.object[i].Month2);
+                        row.find("#Month3").text(data.object[i].Month3);
+                        row.find("#Month4").text(data.object[i].Month4);
+                        row.find("#Month5").text(data.object[i].Month5);
+                        row.find("#Month6").text(data.object[i].Month6);
+                        row.find("#Month7").text(data.object[i].Month7);
+                        row.find("#Month8").text(data.object[i].Month8);
+                        row.find("#Month9").text(data.object[i].Month9);
+                        row.find("#Month10").text(data.object[i].Month10);
+                        row.find("#Month11").text(data.object[i].Month11);
+                        row.find("#Month12").text(data.object[i].Month12);
+                        row.appendTo("#maintable");
+                    }
+                }, error: function () {
+                    alert("加载失败");
+                }
+            })
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+<div id="head_icons"><!--上方标题和按钮-->
+    <h1>股份公司万元产值能耗</h1>
+    <div id="home_icons">
+        <img src="images/Home_icons_48x48.png"/>
+    </div>
+    <div id="data_icons">
+        <img src="images/date_icons_48x48.png" id="data_select_icons"/>
+        <div id="data_select">
+            <!--<img src="images/data_background.png" />-->
+            <select id="select_year">
+                <option value="2015年">2015年</option>
+                <option value="2016年">2016年</option>
+                <option value="2017年">2017年</option>
+                <option value="2018年">2018年</option>
+            </select>
+            <br/>
+            <select id="select_month">
+                <option value="1月">1月</option>
+                <option value="2月">2月</option>
+                <option value="3月">3月</option>
+                <option value="4月">4月</option>
+                <option value="5月">5月</option>
+                <option value="6月">6月</option>
+                <option value="7月">7月</option>
+                <option value="8月">8月</option>
+                <option value="9月">9月</option>
+                <option value="10月">10月</option>
+                <option value="11月">11月</option>
+                <option value="12月">12月</option>
+            </select>
+            <input type="button" name="btnQuery" value="查询" id="btnQuery">
+        </div>
+    </div>
+
+</div>
+
+<div id="myBarChart"></div><!--柱形图，折线图-->
+
+<div id="dataTable">
+    <table id="maintable" class="table" width="100%">
+        <thead>
+        <tr>
+            <th>月份</th>
+            <th>1月</th>
+            <th>2月</th>
+            <th>3月</th>
+            <th>4月</th>
+            <th>5月</th>
+            <th>6月</th>
+            <th>7月</th>
+            <th>8月</th>
+            <th>9月</th>
+            <th>10月</th>
+            <th>11月</th>
+            <th>12月</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="content">
+            <td id="ID" ></td>
+            <td id="Month1"></td>
+            <td id="Month2"></td>
+            <td id="Month3"></td>
+            <td id="Month4"></td>
+            <td id="Month5"></td>
+            <td id="Month6"></td>
+            <td id="Month7"></td>
+            <td id="Month8"></td>
+            <td id="Month9"></td>
+            <td id="Month10"></td>
+            <td id="Month11"></td>
+            <td id="Month12"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="text_file">
+    <p id="text"> 分析说明 </p>
+</div>
+<div id="prev_next_icons"></div>
+
+
+
+</body>
+</html>

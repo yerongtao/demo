@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标签练习</title>
+</head>
+<body>
+<h1>标签练习</h1>
+<hr/>
+<h2>文本格式标签</h2>
+<p>&lt;p&gt;标签 标识段落文本</p>
+<pre>&lt;pre&gt;标签 标识预定义文本</pre>
+<blockquote>&lt;blockquote&gt;标签 标识引用文本</blockquote>
+<hr/>
+<h2>字符格式标签</h2>
+<p id="test">例如，针对下面这个一元二次方程：</p>
+<p><i>x</i><sup>2</sup>-<b>5</b><i>x</i>+<b>4</b>=0</p>
+<p>我们使用<big><b>分解因式法</b></big>来演示解题思路如下：</p>
+<p><small>由：</small>(<i>x</i>-1)(<i>x</i>-4)=0</p>
+<p><small>得：</small>
+    <br/><i>x</i><sub>1</sub>=1<br/>
+    <i>x</i><sub>2</sub>=4
+</p>
+<hr/>
+<h2>列表标签——列表结构</h2>
+<h3>解一元二次方程</h3>
+<p>一元二次方程求解有4种方法</p>
+<ol><!--标识有序列表-->
+    <li>直接开平方法</li><!--标识列表项目，放在ol或ul内-->
+    <li>配方法</li>
+    <li>公式法</li>
+    <li>分解因式法</li>
+</ol>
+<ul><!--标识无序列表-->
+    <li>直接开平方法</li>
+    <li>配方法</li>
+    <li>公式法</li>
+    <li>分解因式法</li>
+</ul>
+<h2>列表标签——定义列表</h2>
+<h3>成语词条列表</h3>
+<dl>
+    <dt>知无不言，言无不尽</dt>
+    <dd>知道的就说，要说的就毫无保留</dd>
+    <dt>智者千虑，必有一失</dt>
+    <dd>不管多聪明的人，在多次的考虑中，也一定会出现个别错误</dd>
+</dl>
+<hr/>
+<h2>链接标签——打开网络地址</h2>
+<a href="http://www.baidu.com">百度默认打开</a><!--不加target属性，默认当前页打开-->
+<a href="http://www.baidu.com" target="_blank">百度新页面打开</a><!--新页面打开-->
+<a href="http://www.baidu.com" target="_self">百度当前页面打开</a><!--当前页面打开-->
+<h2>链接标签——定义锚点</h2>
+<a href="#test">跳转到一元二次方程</a>
+<hr/>
+<h2>多媒体标签</h2>
+<img src="image/bg3.jpg" alt="这是一张图片"/>
+<hr/>
+<h2>表格标签</h2>
+<table summary="ASCII是英文American Code for Information Interchange的缩写">
+    <caption>ASCII字符集(节选)</caption>
+    <tr>
+        <th>十进制</th>
+        <th>十六进制</th>
+        <th>字符</th>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>9</td>
+        <td>TAB</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>A</td>
+        <td>换行</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>D</td>
+        <td>回车</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>20</td>
+        <td>空格</td>
+    </tr>
+</table>
+<hr/>
+<h2>表单标签</h2>
+<from id="from1" name="from1" method="post" action="">
+    <p>单行文本域：<input type="text" name="textfield" id="textfield"/></p>
+    <p>密码域：<input type="password" name="passwordfield" id="passwordfield"/></p>
+    <p>多行文本域：<textarea name="textareafield" id="textareafield" cols="30" rows="10"></textarea></p>
+    <p>复选框：复选框1<input type="checkbox" name="checkbox1" value=""/>
+               复选框2<input type="checkbox" name="checkbox2" value=""/></p>
+    <p>单选按钮：
+        <input type="radio" name="radio1" value=""/>按钮1
+        <input type="radio" name="radio2" value=""/>按钮2
+    </p>
+    <p>下拉菜单：
+        <select name="selectlist">
+            <option value="1">选项1</option>
+            <option value="2">选项2</option>
+            <option value="3">选项3</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" name="button" id="button" value="提交"/>
+    </p>
+</from>
+</body>
+</html>

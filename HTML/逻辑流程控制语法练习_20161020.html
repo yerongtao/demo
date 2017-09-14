@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>流程控制练习</title>
+    <style>
+        body{background: #c8c8c8}
+        #left {width: 500px; height: 500px; float: left }
+        #right{width: 500px; height: 500px; float: left; margin-left: 20px}
+    </style>
+    <script>
+        function ifFunction() {
+            var x = "";//声明一个字符串变量
+            var time = new Date().getHours();//获取当前时间的小时数
+
+            if(time < 20) {//如果当前时间小于20点，执行下面的语句
+                x = "Good Day";
+            }
+            document.getElementById("if").innerHTML = x;//将x的值写入
+            document.getElementById("showTime").innerHTML = time;//将当前时间写入
+        }
+        function ifElseFunction() {
+            var x = "";
+            var  time = new Date().getHours();
+            if(time < 20) {//如果当前时间小于20点，执行下面的语句
+                x = "Good Day";
+            }
+            else {//如果当前时间不是小于20点，则执行下面的语句
+                x = "Good Evenging";
+            }
+            document.getElementById("ifElse").innerHTML = x;
+            document.getElementById("showTime2").innerHTML = time;
+        }
+        function switchFunction() {
+            var x;
+            var y;
+            var date=new Date().getDay();
+            switch (date)
+            {
+                case 0:
+                    x="Today it's Sunday";
+                    break;
+                case 1:
+                    x="Today it's Monday";
+                    break;
+                case 2:
+                    x="Today it's Tuesday";
+                    break;
+                case 3:
+                    x="Today it's Wednesday";
+                    break;
+                case 4:
+                    x="Today it's Thursday";
+                    break;
+                case 5:
+                    x="Today it's Friday";
+                    break;
+                case 6:
+                    x="Today it's Saturday";
+                    break;
+            }
+            document.getElementById("switch").innerHTML=x;
+            switch (date)
+            {
+                case 0:
+                    y="Today it's Sunday";
+                    break;
+                case 6:
+                    y="Today it's Saturday";
+                    break;
+                default://如果不是周六周日，就执行下面的语句
+                    y="Looking forward to the Weekend";
+            }
+            document.getElementById("switch2").innerHTML=y;
+        }
+        function forFunction() {
+            var arr = ["aa", "bb", "cc"];
+            var temp = "";
+            for(var i = 0; i < arr.length; i++) {//for循环，取出数组的值
+                temp = temp + arr[i] + " ";//用一个中间变量把数组的内容显示出来
+            }
+            document.getElementById("for").innerHTML = temp;
+        }
+        function forInFunction() {
+            var person = {name:"Echo", age:"20", jobId:"0098"};
+            var x;
+            var s = "";
+            var temp = "";
+            for(x in person) {//for in循环遍历person对象
+                s = s + x + " ";//用一个中间变量把遍历到的x显示出来
+                temp = temp + person[x] + " ";//用一个中间变量把person取到的值显示出来
+            }
+            document.getElementById("forInTemp").innerHTML = s;
+            document.getElementById("forIn").innerHTML = temp;
+        }
+    </script>
+</head>
+<body>
+<div id="left">
+    <h2>if 语句</h2>
+    <p>如果时间早于20:00，会获得问候语“Good day”</p>
+    <button onclick="ifFunction()">点这里</button>
+    <p id="if"></p>
+    <p>现在的时间是：</p>
+    <p id="showTime"></p>
+    <hr/>
+    <h2>if-else 语句</h2>
+    <p>点击这里，获得基于时间的问候语</p>
+    <button onclick="ifElseFunction()">点这里</button>
+    <p id="ifElse"></p>
+    <p>现在的时间是：</p>
+    <p id="showTime2"></p>
+    <hr/>
+    <h2>swith 语句</h2>
+    <p>点击这里，查看今天星期几:</p>
+    <button onclick="switchFunction()">点这里</button>
+    <p id="switch"></p>
+    <p id="switch2"></p>
+    <hr/>
+</div>
+<div id="right">
+    <h2>for 循环</h2>
+    <p>输出数组的元素</p>
+    <button onclick="forFunction()">点这里</button>
+    <p id="for"></p>
+    <hr/>
+    <h2>for in 循环</h2>
+    <p>输出对象的元素</p>
+    <button onclick="forInFunction()">点这里</button>
+    <p id="forInTemp"></p>
+    <p id="forIn"></p>
+    <hr/>
+
+</div>
+</body>
+</html>

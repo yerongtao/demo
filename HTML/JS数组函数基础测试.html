@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*数组练习测试*/
+        var i;
+        var cars = new Array();
+        cars[0] = "Audi";
+        cars[1] = "BMW";
+        cars[2] = "Volvo";
+        //    alert(cars);
+        var arr = new Array("aa","bb");
+        var len = arr.length;
+        //    alert(len);
+        var array = ["cc","dd","ee"];
+        //    alert(array);
+        for (i=0;i<cars.length;i++)
+        {
+            document.write(cars[i] + "<br>");
+            document.write(arr[i] + "<br>");
+        }
+        /*新建对象练习测试*/
+        var person={
+            firstname : "Bill",
+            lastname  : "Gates",
+            id        :  5566
+        };
+        document.write(person.lastname + "<br />");
+        document.write(person["lastname"] + "<br />");
+        /*函数练习测试*/
+        function clickButton() {
+            alert("你真点呀！")
+        }
+    </script>
+
+</head>
+<body>
+<button onclick="clickButton()">点我呀</button>
+</body>
+</html>

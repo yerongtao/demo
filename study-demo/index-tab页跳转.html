@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .st-menu-tab {
+            display: block;
+            height:30px;
+            width: 350px;
+            color: #fd9c15;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .st-menu-tab li {
+            cursor:pointer;
+            float:left;
+            list-style:none;
+            height:28px;
+            line-height:28px;
+            background-color: #A7FADE;
+            border:1px solid #fd9c15;
+            margin:0 3px;
+            border-bottom:none;
+            display:inline-block;
+            width:60px;
+            text-align: center;
+        }
+        .st-menu-tab li.on {
+            border:2px solid #fd9c15;
+            border-bottom: 2px solid #7FFFD4;
+            font-size: 20px
+        }
+        .st-menu-info {
+            margin-left: 50px;
+            height:200px;
+            width: 350px;
+            line-height: 25px;
+            border:2px solid #fd9c15;
+            border-top:none padding:5px;
+            background-color: #7FFFD4;
+        }
+        .hide {display: none;}
+        .sec-title {
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="st-menu-tab">
+    <li class="on">目录</li>
+    <li>笔记</li>
+    <li>答疑</li>
+    <li>评论</li>
+</ul>
+<div class="st-menu-info">
+    <div class="on">
+        <ul>
+            <li class="sec-title">
+                <span>第1章 简介</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="sec-title">
+                <span>第2章 企业核心竞争力详解</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="sec-title">
+                <span>第3章 员工管理</span>
+            </li>
+        </ul>
+    </div>
+    <div class="hide"><h2>笔记</h2></div>
+    <div class="hide"><h2>答疑</h2></div>
+    <div class="hide"><h2>评论</h2></div>
+</div>
+
+
+<script type="text/javascript" src="script/jquery-3.1.1.js"></script>
+<!--tab页跳转-->
+<script type="text/javascript">
+    $(document).ready(function (){
+        var stMenuTab = $(".st-menu-tab li"),
+                stMenuInfo= $(".st-menu-info div");
+        stMenuTab.click(function() {
+            var i = $(this).index();
+            $(this).addClass('on').siblings().removeClass('on');
+            stMenuInfo.eq(i).show().siblings().hide();
+        });
+    });
+</script>
+</body>
+</html>

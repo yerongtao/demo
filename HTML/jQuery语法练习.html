@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery语法练习</title>
+    <style>
+        div {
+            height: 50px;
+            width: 300px;
+            margin-top: 10px;
+            background: #88cc00;
+            /*float: left;*/
+        }
+        .default {
+            height: 50px;
+            width: 300px;
+            margin: 5px;
+            background: #c8f00b;
+            color: #000;
+            float: left;
+        }
+        .change {
+            background: #f00;
+            color: #fff;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript">
+        /*通过类名选择器选择元素并更改样式*/
+        $(document).ready(function(){/*加载页面后执行下列语句*/
+            var myClass = $(".myClass");
+            myClass.css("color","#f0fc00");
+            myClass.css("background-color","#00ac0f");
+        });
+        /*点击按钮,为div元素和id为span的元素修改样式*/
+        $(document).ready(function() {
+            $("input[type=button]").click(function() {
+                $("div,#span").addClass("change");
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<h3>1. 类名选择器</h3>
+<p>*****通过类名选择器选择元素并更改样式*****</>
+<div class = "myClass">注意看我的样式, 我是被jquery修改过的哦</div>
+<div>我是默认的样式</div>
+<hr/>
+<h3>2. 复合选择器</h3>
+<p>*****点击按钮,为div元素和id为span的元素修改样式*****</p>
+<p class="default">p元素</p>
+<div class="default">div元素</div>
+<span class="default" id="span">id为span的元素</span>
+<input type="button" value="为div元素和ID为span的元素换肤"/>
+<hr/>
+
+
+</body>
+</html>

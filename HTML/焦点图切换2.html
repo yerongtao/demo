@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>焦点图切换</title>
+    <style>
+        #box {
+            width: 636px;
+            height: 325px;
+            position: relative;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+        #buttons{
+            z-index: 2;
+            width: 120px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #buttons span{
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 2px;
+            display: inline;
+            background: #fff;
+            color: #f60;
+            line-height: 20px;
+            text-align: center;
+        }
+        #buttons span.on{
+            background: #f60;
+            color: #fff;
+        }
+        #prev { left: 20px;}
+        #next { right: 20px;}
+    </style>
+    <script>
+        window.onload = function() {
+            /*先获取各ID的id值*/
+            var box = document.getElementById("box");
+            var list = document.getElementById("list");
+            var buttons = document.getElementById("buttons").getElementsByTagName("sapn");
+            var prev = document.getElementById("prev");
+            var next= document.getElementById("next");
+            var index = 1;
+
+            /*函数*/
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="list" style="left: -636px">
+        <img src="image/scroll5.jpg" alt=""/>
+        <img src="image/scroll1.jpg" alt=""/>
+        <img src="image/scroll2.jpg" alt=""/>
+        <img src="image/scroll3.jpg" alt=""/>
+        <img src="image/scroll4.jpg" alt=""/>
+        <img src="image/scroll5.jpg" alt=""/>
+        <img src="image/scroll1.jpg" alt=""/>
+
+    </div>
+    <div id="buttons">
+        <span index="1" class="on">1</span>
+        <span index="2">2</span>
+        <span index="3">3</span>
+        <span index="4">4</span>
+        <span index="5">5</span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a><!--左箭头-->
+    <a href="javascript:;" id="next" class="arrow">&gt;</a><!--右箭头-->
+</div>
+</body>
+</html>

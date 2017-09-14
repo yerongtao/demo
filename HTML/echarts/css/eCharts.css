@@ -1,0 +1,131 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+body {
+    height: 910px;
+    background: #f3f3f3 url("../images/backgroundNew.png") no-repeat top center;/*添加背景图片，居中*/
+}
+
+#myBarChart {
+    width: 1200px;
+    height:470px;
+    border: 1px solid ;
+    margin: 20px auto;
+}
+/*-------table-------*/
+
+#dataTable {
+    width: 1200px;
+    /*height:200px;*/
+    border: 1px solid ;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+#dataTable #maintable thead tr th {  /*设置表头样式*/
+    font: 16px Arial;/*字体字号*/
+    text-align: center;/*对齐方式:向左对其*/
+    padding: 5px;/*内边距*/
+    border-bottom: 1px solid #333;/*下边框:1像素宽,实线,颜色*/
+}
+
+#dataTable #maintable tbody #content { /*设置表格内容样式*/
+    font: 15px Arial;/*字体字号*/
+    background-color: #3393F3;
+    text-align: center;
+}
+
+
+#head_icons {
+    /*background: #3f7;*/
+}
+#head_icons h1 {
+    font-family: '微软雅黑';
+    text-align:center;
+    font-size: 48px;/*字体大小*/
+    color:#575757;/*设置颜色*/
+    margin-top: 50px;
+}
+
+#head_icons #home_icons {
+    width: 48px;
+    height: 48px;
+    /*background: url("../images/Home_icons_48x48.png") no-repeat top right;*/
+    margin-right: 150px;
+    margin-top: -55px;
+    float: right;
+}
+#head_icons #data_icons {
+    width: 48px;
+    height: 48px;
+    /*background: url("../images/date_icons_48x48.png") no-repeat top right;*/
+    margin-right: 248px;
+    margin-top: -55px;
+    float: right;
+    position:relative; z-index:99999; /*将data_icon这个div层置顶（position:relative; z-index:99999）只要数值够大，就处于层最上方*/
+}
+#head_icons #data_icons #data_select {
+    /*margin-right: 48px;*/
+    margin-top: 6px;
+    float: right;
+    display: none;
+    width: 240px;
+    height: 120px;
+    background: url("../images/data_background.png") /*no-repeat top center*/;/*添加背景图片，居中*/
+    /*overflow: hidden;*/
+
+}
+#head_icons #data_icons #data_select #select_year,#select_month{
+    margin-top: 20px;
+    margin-left: 30px;
+    background: transparent;
+    width: 100px;
+    height: 34px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none; /*for chrome*/
+    background: url("../images/下拉框.jpg") no-repeat right;
+}
+#head_icons #data_icons #data_select #select_month{
+    margin-top: 10px;
+}
+#head_icons #data_icons #data_select #btnQuery{
+    float: right;
+    margin-right: 30px;
+    margin-top: -10px;
+    width: 60px;
+    height: 30px;
+    background-color: #034a76;
+    border-radius:10px;border:0;
+
+    /*设置查询按钮的圆角和渐变样式*/
+    border: none;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    /*border-radius: 40px;*/
+    -moz-box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000, inset 0 1px #fff, inset 0 12px rgba(255, 255, 255, 0.15), inset 0 4px 10px #cef, inset 0 22px 5px #0773b4, inset 0 -5px 10px #0df;
+    -webkit-box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000;
+    box-shadow: 0 0 1px #fff, 0 0 3px #000, 0 0 3px #000, inset 0 1px #fff, inset 0 12px rgba(255, 255, 255, 0.15), inset 0 4px 10px #cef, inset 0 22px 5px #0773b4, inset 0 -5px 10px #0df;
+
+
+
+}
+#text_file {
+    width: 1200px;
+    height: 190px;
+    border: 1px solid ;
+    margin: 5px auto;
+}
+#text_file p {
+    font-family: '微软雅黑';
+    font-size: 24px;/*字体大小*/
+}
+
+#prev_next_icons{
+    height: 48px;
+    background: url("../images/next_icons.png") no-repeat center;
+    margin-top: 5px;
+}
+

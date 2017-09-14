@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 600px;/*宽*/
+    height: 500px;/*高*/
+    border: 1px gray solid;/*边框线*/
+    margin: 50px auto;/*边框位置，距上方50像素，左右自适应*/
+    /*background: transparent url(../image/bg3.jpg) no-repeat top left;/!*背景色透明，不拓展，居左上*!/*/
+    /*background: #0ff url(../image/bg3.jpg) no-repeat ;/!*背景色蓝色,不拓展，居上，左右自适应*!/*/
+    /*background: #0ff url(../image/bg3.jpg) repeat fixed top ;/!*背景色蓝色,拓展，居上，左右用背景图拓展平铺延伸*!/*/
+    /*background: #0ff url(../image/bg3.jpg) no-repeat fixed center;/!*背景色蓝色,拓展，居上，左右用背景图拓展平铺延伸*!/*/
+    background: #0ff url(../image/bg3.jpg) repeat top left;/*背景色蓝色,拓展，居左上，剩下的部分用背景图平铺延伸*/
+}
+.background{
+    /*background:transparent url() repeat top left;/!*transparent背景色为透明，*!/*/
+
+}

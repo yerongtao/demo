@@ -1,0 +1,12 @@
+{
+  "books": [
+    { "language":"Java" , "edition":"second" },
+    { "language":"C++" , "lastName":"fifth" },
+    { "language":"C" , "lastName":"third" }
+  ],
+  "id": "011A",
+  "price": 500,
+  "name": "Andy",
+  "say": "Hi !",
+  "arr":[20,30,40,43,34,54,57]
+}
